@@ -151,6 +151,10 @@ msgstr "Beslis! Jy kan jou CV met 'n enkele klik na PDF uitvoer. Die uitgevoerd
 msgid "Access your resumes and data programmatically using the API."
 msgstr "Verkry programmatiese toegang tot jou CV's en data deur die API."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Adapt your resume to a role and employer with suggestions tuned for clarity and ATS-friendly wording."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Add a custom field"
 msgstr "Voeg 'n pasgemaakte veld by"
@@ -261,6 +265,14 @@ msgstr "Afrikaans"
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "KI"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI features"
+msgstr ""
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI resume assistant"
+msgstr ""
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "AI returned some invalid references"
@@ -484,6 +496,10 @@ msgstr "Randradius"
 msgid "Border Width"
 msgstr "Randwydte"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Bring your own API keys"
+msgstr ""
+
 #: src/components/command-palette/index.tsx
 msgid "Builder Command Palette"
 msgstr "Bouergereedskappalet"
@@ -587,6 +603,10 @@ msgstr "Van plan verander? Hernoem jou CV na iets meer beskrywend."
 msgid "Changelog"
 msgstr "Veranderlogboek"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Chat with an assistant that refines your content and applies edits safely to your resume."
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Check your email for a link to reset your password."
 msgstr "Gaan jou e-pos na vir 'n skakel om jou wagwoord te herstel."
@@ -655,6 +675,10 @@ msgstr "Bevestig"
 #: src/routes/dashboard/settings/authentication/-components/social-provider.tsx
 msgid "Connect"
 msgstr "Koppel"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Connect OpenAI, Google, Anthropic, or a local Ollama model—your keys stay on your side when you self-host."
+msgstr ""
 
 #: src/dialogs/resume/sections/cover-letter.tsx
 #: src/dialogs/resume/sections/summary-item.tsx
@@ -1551,6 +1575,10 @@ msgstr "Werkssoektog"
 msgid "Job Search API"
 msgstr "Werkssoek-API"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Job-specific tailoring"
+msgstr ""
+
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "JSearch aggregates job listings from multiple job boards using Google for Jobs. You can filter by country (ISO alpha-2 code), date posted, job type, remote options, and experience level."
 msgstr "JSearch versamel werwingadvertensies van verskeie werfborde deur Google for Jobs te gebruik. Jy kan filter volgens land (ISO-alpha-2-kode), publikasiedatum, werftipe, afstandopsies en ervaringsvlak."
@@ -1894,6 +1922,10 @@ msgstr "maak in nuwe oortjie oop"
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Optimizing summary, experience, and skills for {0}"
 msgstr "Optimalisering van opsomming, ervaring en vaardighede vir {0}"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Optional intelligence that helps you write, import, and target your resume—enabled when you choose a model and add your own credentials."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -2504,6 +2536,10 @@ msgstr ""
 msgid "Slug"
 msgstr "Slak"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Smart import from PDF & Word"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -3011,6 +3047,10 @@ msgstr "Besig om jou wagwoord by te werk..."
 msgid "Updating your resume..."
 msgstr "Besig om jou CV by te werk..."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Upload an existing résumé and let AI extract structured data you can edit in the builder."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Uploading picture..."
 msgstr "Laai tans prent op..."
@@ -3242,4 +3282,3 @@ msgstr "Zoem uit"
 #: src/utils/locale.ts
 msgid "Zulu"
 msgstr "Zoeloe"
-

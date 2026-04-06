@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { AiFeatures } from "./-sections/ai-features";
 import { DonationBanner } from "./-sections/donate";
 import { FAQ } from "./-sections/faq";
 import { Features } from "./-sections/features";
@@ -23,6 +24,7 @@ function RouteComponent() {
         <div className="border-x border-border [&>section]:border-t [&>section]:border-border [&>section:first-child]:border-t-0">
           <Statistics />
           <Features />
+          <AiFeatures />
           <Templates />
           <Testimonials />
           <DonationBanner />

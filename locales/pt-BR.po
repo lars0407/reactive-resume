@@ -151,6 +151,10 @@ msgstr "Com certeza! Você pode exportar seu currículo para PDF com um único c
 msgid "Access your resumes and data programmatically using the API."
 msgstr "Acesse seus currículos e dados programaticamente usando a API."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Adapt your resume to a role and employer with suggestions tuned for clarity and ATS-friendly wording."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Add a custom field"
 msgstr "Adicionar campo personalizado"
@@ -261,6 +265,14 @@ msgstr "Africâner"
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "IA"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI features"
+msgstr ""
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI resume assistant"
+msgstr ""
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "AI returned some invalid references"
@@ -484,6 +496,10 @@ msgstr "Raio da borda"
 msgid "Border Width"
 msgstr "Largura da borda"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Bring your own API keys"
+msgstr ""
+
 #: src/components/command-palette/index.tsx
 msgid "Builder Command Palette"
 msgstr "Paleta de Comandos do Construtor"
@@ -587,6 +603,10 @@ msgstr "Mudou de ideia? Renomeie seu currículo para algo mais descritivo."
 msgid "Changelog"
 msgstr "Histórico de mudanças"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Chat with an assistant that refines your content and applies edits safely to your resume."
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Check your email for a link to reset your password."
 msgstr "Verifique seu email em busca de um link para redefinir sua senha."
@@ -655,6 +675,10 @@ msgstr "Confirmar"
 #: src/routes/dashboard/settings/authentication/-components/social-provider.tsx
 msgid "Connect"
 msgstr "Conectar"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Connect OpenAI, Google, Anthropic, or a local Ollama model—your keys stay on your side when you self-host."
+msgstr ""
 
 #: src/dialogs/resume/sections/cover-letter.tsx
 #: src/dialogs/resume/sections/summary-item.tsx
@@ -1551,6 +1575,10 @@ msgstr "Busca de emprego"
 msgid "Job Search API"
 msgstr "API de busca de empregos"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Job-specific tailoring"
+msgstr ""
+
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "JSearch aggregates job listings from multiple job boards using Google for Jobs. You can filter by country (ISO alpha-2 code), date posted, job type, remote options, and experience level."
 msgstr "O JSearch agrega listas de empregos de vários quadros de empregos usando o Google for Jobs. O senhor pode filtrar por país (código ISO alfa-2), data de publicação, tipo de emprego, opções remotas e nível de experiência."
@@ -1894,6 +1922,10 @@ msgstr "abre em nova aba"
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Optimizing summary, experience, and skills for {0}"
 msgstr "Otimização de resumo, experiência e habilidades para {0}"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Optional intelligence that helps you write, import, and target your resume—enabled when you choose a model and add your own credentials."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -2504,6 +2536,10 @@ msgstr ""
 msgid "Slug"
 msgstr "Permalink"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Smart import from PDF & Word"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -3011,6 +3047,10 @@ msgstr "Atualizando sua senha..."
 msgid "Updating your resume..."
 msgstr "Atualizando seu currículo..."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Upload an existing résumé and let AI extract structured data you can edit in the builder."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Uploading picture..."
 msgstr "Enviando foto..."
@@ -3242,4 +3282,3 @@ msgstr "Diminuir zoom"
 #: src/utils/locale.ts
 msgid "Zulu"
 msgstr "Zulu"
-

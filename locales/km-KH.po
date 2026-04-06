@@ -151,6 +151,10 @@ msgstr "បាន​ប្រាកដ! អ្នក​អាច​នាំច�
 msgid "Access your resumes and data programmatically using the API."
 msgstr "ចូលដំណើរការប្រវត្តិរូប និងទិន្នន័យរបស់អ្នកតាមកម្មវិធី ដោយប្រើ API។"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Adapt your resume to a role and employer with suggestions tuned for clarity and ATS-friendly wording."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Add a custom field"
 msgstr "បន្ថែម​វាល​ផ្ទាល់ខ្លួន"
@@ -261,6 +265,14 @@ msgstr "Afrikaans"
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "AI"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI features"
+msgstr ""
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI resume assistant"
+msgstr ""
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "AI returned some invalid references"
@@ -484,6 +496,10 @@ msgstr "រ៉េឌីយ៉ូស​គែម"
 msgid "Border Width"
 msgstr "ទទឹង​គែម"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Bring your own API keys"
+msgstr ""
+
 #: src/components/command-palette/index.tsx
 msgid "Builder Command Palette"
 msgstr "បញ្ជី​ពាក្យ​បញ្ជា​របស់​កម្មវិធី​បង្កើត"
@@ -587,6 +603,10 @@ msgstr "ប្តូរ​ចិត្ត​ហើយ​ឬ​អត់? ប្�
 msgid "Changelog"
 msgstr "កំណត់ហេតុ​បម្លែង"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Chat with an assistant that refines your content and applies edits safely to your resume."
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Check your email for a link to reset your password."
 msgstr "ពិនិត្យ​អ៊ីមែល​របស់​អ្នក​សម្រាប់​តំណ​មួយ ដើម្បី​កំណត់​ពាក្យសម្ងាត់​ឡើងវិញ។"
@@ -655,6 +675,10 @@ msgstr "អះអាង"
 #: src/routes/dashboard/settings/authentication/-components/social-provider.tsx
 msgid "Connect"
 msgstr "តភ្ជាប់"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Connect OpenAI, Google, Anthropic, or a local Ollama model—your keys stay on your side when you self-host."
+msgstr ""
 
 #: src/dialogs/resume/sections/cover-letter.tsx
 #: src/dialogs/resume/sections/summary-item.tsx
@@ -1551,6 +1575,10 @@ msgstr ""
 msgid "Job Search API"
 msgstr ""
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Job-specific tailoring"
+msgstr ""
+
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "JSearch aggregates job listings from multiple job boards using Google for Jobs. You can filter by country (ISO alpha-2 code), date posted, job type, remote options, and experience level."
 msgstr ""
@@ -1893,6 +1921,10 @@ msgstr "បើក​ក្នុង​ផ្ទាំង​ថ្មី"
 #. placeholder {0}: job.job_title
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Optimizing summary, experience, and skills for {0}"
+msgstr ""
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Optional intelligence that helps you write, import, and target your resume—enabled when you choose a model and add your own credentials."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -2504,6 +2536,10 @@ msgstr ""
 msgid "Slug"
 msgstr "Slug"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Smart import from PDF & Word"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -3011,6 +3047,10 @@ msgstr "កំពុង​បច្ចុប្បន្នភាព​ពាក
 msgid "Updating your resume..."
 msgstr "កំពុង​បច្ចុប្បន្នភាព​ប្រវត្តិរូប​របស់​អ្នក..."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Upload an existing résumé and let AI extract structured data you can edit in the builder."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Uploading picture..."
 msgstr "កំពុង​អាប់ឡូដ​រូបភាព..."
@@ -3242,4 +3282,3 @@ msgstr "បង្រួម"
 #: src/utils/locale.ts
 msgid "Zulu"
 msgstr "Zulu"
-

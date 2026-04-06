@@ -151,6 +151,10 @@ msgstr "Žinoma! Galite vienu spustelėjimu eksportuoti savo gyvenimo aprašymą
 msgid "Access your resumes and data programmatically using the API."
 msgstr "Programiškai pasiekite savo gyvenimo aprašymus ir duomenis naudodami API."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Adapt your resume to a role and employer with suggestions tuned for clarity and ATS-friendly wording."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Add a custom field"
 msgstr "Pridėti pasirinktinį lauką"
@@ -261,6 +265,14 @@ msgstr "Afrikanso"
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "AI"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI features"
+msgstr ""
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI resume assistant"
+msgstr ""
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "AI returned some invalid references"
@@ -484,6 +496,10 @@ msgstr "Rėmelio spindulys"
 msgid "Border Width"
 msgstr "Rėmelio plotis"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Bring your own API keys"
+msgstr ""
+
 #: src/components/command-palette/index.tsx
 msgid "Builder Command Palette"
 msgstr "Kūrėjo komandų paletė"
@@ -587,6 +603,10 @@ msgstr "Persigalvojote? Pervardinkite savo gyvenimo aprašymą į apibūdinantį
 msgid "Changelog"
 msgstr "Pakeitimų žurnalas"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Chat with an assistant that refines your content and applies edits safely to your resume."
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Check your email for a link to reset your password."
 msgstr "Patikrinkite el. paštą – ten rasite nuorodą slaptažodžiui atkurti."
@@ -655,6 +675,10 @@ msgstr "Patvirtinti"
 #: src/routes/dashboard/settings/authentication/-components/social-provider.tsx
 msgid "Connect"
 msgstr "Prisijungti"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Connect OpenAI, Google, Anthropic, or a local Ollama model—your keys stay on your side when you self-host."
+msgstr ""
 
 #: src/dialogs/resume/sections/cover-letter.tsx
 #: src/dialogs/resume/sections/summary-item.tsx
@@ -1551,6 +1575,10 @@ msgstr "Darbo paieška"
 msgid "Job Search API"
 msgstr "Darbo paieškos API"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Job-specific tailoring"
+msgstr ""
+
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "JSearch aggregates job listings from multiple job boards using Google for Jobs. You can filter by country (ISO alpha-2 code), date posted, job type, remote options, and experience level."
 msgstr "\"JSearch\" apibendrina darbo skelbimus iš kelių darbo skelbimų lentų, naudodama \"Google for Jobs\". Galite filtruoti pagal šalį (ISO alfa-2 kodas), skelbimo datą, darbo tipą, nuotolinio darbo galimybes ir patirties lygį."
@@ -1894,6 +1922,10 @@ msgstr "atidaro naujame skirtuke"
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Optimizing summary, experience, and skills for {0}"
 msgstr "Apibendrinimų, patirties ir įgūdžių optimizavimas {0}"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Optional intelligence that helps you write, import, and target your resume—enabled when you choose a model and add your own credentials."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -2504,6 +2536,10 @@ msgstr ""
 msgid "Slug"
 msgstr "Nuorodos dalis"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Smart import from PDF & Word"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -3011,6 +3047,10 @@ msgstr "Atnaujinamas jūsų slaptažodis..."
 msgid "Updating your resume..."
 msgstr "Atnaujinamas jūsų gyvenimo aprašymas..."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Upload an existing résumé and let AI extract structured data you can edit in the builder."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Uploading picture..."
 msgstr "Įkeliamas paveikslėlis..."
@@ -3242,4 +3282,3 @@ msgstr "Tolinti"
 #: src/utils/locale.ts
 msgid "Zulu"
 msgstr "Zulų"
-

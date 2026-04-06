@@ -151,6 +151,10 @@ msgstr "בהחלט! אפשר לייצא את קורות החיים שלך ל־PD
 msgid "Access your resumes and data programmatically using the API."
 msgstr "גש לקורות החיים ולנתונים שלך באופן תכנותי באמצעות ה־API."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Adapt your resume to a role and employer with suggestions tuned for clarity and ATS-friendly wording."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Add a custom field"
 msgstr "הוספת שדה מותאם אישית"
@@ -261,6 +265,14 @@ msgstr "אפריקאנס"
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "בינה מלאכותית"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI features"
+msgstr ""
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI resume assistant"
+msgstr ""
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "AI returned some invalid references"
@@ -484,6 +496,10 @@ msgstr "רדיוס מסגרת"
 msgid "Border Width"
 msgstr "רוחב מסגרת"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Bring your own API keys"
+msgstr ""
+
 #: src/components/command-palette/index.tsx
 msgid "Builder Command Palette"
 msgstr "לוח פקודות הבונה"
@@ -587,6 +603,10 @@ msgstr "התחרטת? אפשר לשנות את שם קורות החיים שלך
 msgid "Changelog"
 msgstr "יומן שינויים"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Chat with an assistant that refines your content and applies edits safely to your resume."
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Check your email for a link to reset your password."
 msgstr "נא לבדוק את הדוא״ל שלך לקישור לאיפוס הסיסמה."
@@ -655,6 +675,10 @@ msgstr "אישור"
 #: src/routes/dashboard/settings/authentication/-components/social-provider.tsx
 msgid "Connect"
 msgstr "חיבור"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Connect OpenAI, Google, Anthropic, or a local Ollama model—your keys stay on your side when you self-host."
+msgstr ""
 
 #: src/dialogs/resume/sections/cover-letter.tsx
 #: src/dialogs/resume/sections/summary-item.tsx
@@ -1551,6 +1575,10 @@ msgstr "חיפוש עבודה"
 msgid "Job Search API"
 msgstr "ממשק ה-API לחיפוש עבודה"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Job-specific tailoring"
+msgstr ""
+
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "JSearch aggregates job listings from multiple job boards using Google for Jobs. You can filter by country (ISO alpha-2 code), date posted, job type, remote options, and experience level."
 msgstr "JSearch אוסף משרות ממספר אתרי דרושים באמצעות Google for Jobs. ניתן לסנן לפי מדינה (קוד ISO alpha-2), תאריך הפרסום, סוג המשרה, אפשרויות לעבודה מרחוק ורמת הניסיון."
@@ -1894,6 +1922,10 @@ msgstr "נפתח בלשונית חדשה"
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Optimizing summary, experience, and skills for {0}"
 msgstr "אופטימיזציה של תקציר, ניסיון וכישורים עבור {0}"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Optional intelligence that helps you write, import, and target your resume—enabled when you choose a model and add your own credentials."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -2504,6 +2536,10 @@ msgstr ""
 msgid "Slug"
 msgstr "שם ייצוגי"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Smart import from PDF & Word"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -3011,6 +3047,10 @@ msgstr "מעדכן את הסיסמה שלך..."
 msgid "Updating your resume..."
 msgstr "מעדכן את קורות החיים שלך..."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Upload an existing résumé and let AI extract structured data you can edit in the builder."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Uploading picture..."
 msgstr "מעלה תמונה..."
@@ -3242,4 +3282,3 @@ msgstr "התרחקות"
 #: src/utils/locale.ts
 msgid "Zulu"
 msgstr "זולו"
-

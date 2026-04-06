@@ -151,6 +151,10 @@ msgstr "Desigur! Puteți exporta CV-ul în PDF cu un singur clic. PDF-ul exporta
 msgid "Access your resumes and data programmatically using the API."
 msgstr "Accesați CV-urile și datele dvs. programatic folosind API-ul."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Adapt your resume to a role and employer with suggestions tuned for clarity and ATS-friendly wording."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Add a custom field"
 msgstr "Adăugați un câmp personalizat"
@@ -261,6 +265,14 @@ msgstr "Afrikaans"
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "AI"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI features"
+msgstr ""
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI resume assistant"
+msgstr ""
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "AI returned some invalid references"
@@ -484,6 +496,10 @@ msgstr "Rază colțuri"
 msgid "Border Width"
 msgstr "Lățime bordură"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Bring your own API keys"
+msgstr ""
+
 #: src/components/command-palette/index.tsx
 msgid "Builder Command Palette"
 msgstr "Paletă de comenzi a constructorului"
@@ -587,6 +603,10 @@ msgstr "V-ați răzgândit? Redenumiți CV-ul cu ceva mai descriptiv."
 msgid "Changelog"
 msgstr "Jurnal de modificări"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Chat with an assistant that refines your content and applies edits safely to your resume."
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Check your email for a link to reset your password."
 msgstr "Verificați-vă e-mailul pentru un link de resetare a parolei."
@@ -655,6 +675,10 @@ msgstr "Confirmă"
 #: src/routes/dashboard/settings/authentication/-components/social-provider.tsx
 msgid "Connect"
 msgstr "Conectează"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Connect OpenAI, Google, Anthropic, or a local Ollama model—your keys stay on your side when you self-host."
+msgstr ""
 
 #: src/dialogs/resume/sections/cover-letter.tsx
 #: src/dialogs/resume/sections/summary-item.tsx
@@ -1551,6 +1575,10 @@ msgstr "Căutarea unui loc de muncă"
 msgid "Job Search API"
 msgstr "API pentru căutarea unui loc de muncă"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Job-specific tailoring"
+msgstr ""
+
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "JSearch aggregates job listings from multiple job boards using Google for Jobs. You can filter by country (ISO alpha-2 code), date posted, job type, remote options, and experience level."
 msgstr "JSearch agregă listele de locuri de muncă de la mai multe site-uri de locuri de muncă utilizând Google for Jobs. Puteți filtra în funcție de țară (cod ISO alfa-2), data publicării, tipul postului, opțiunile la distanță și nivelul de experiență."
@@ -1894,6 +1922,10 @@ msgstr "se deschide într-o filă nouă"
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Optimizing summary, experience, and skills for {0}"
 msgstr "Optimizarea rezumatului, experienței și competențelor pentru {0}"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Optional intelligence that helps you write, import, and target your resume—enabled when you choose a model and add your own credentials."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -2504,6 +2536,10 @@ msgstr ""
 msgid "Slug"
 msgstr "Slug"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Smart import from PDF & Word"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -3011,6 +3047,10 @@ msgstr "Se actualizează parola..."
 msgid "Updating your resume..."
 msgstr "Se actualizează CV-ul..."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Upload an existing résumé and let AI extract structured data you can edit in the builder."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Uploading picture..."
 msgstr "Se încarcă imaginea..."
@@ -3242,4 +3282,3 @@ msgstr "Micșorează"
 #: src/utils/locale.ts
 msgid "Zulu"
 msgstr "Zulu"
-

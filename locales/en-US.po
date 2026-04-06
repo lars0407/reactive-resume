@@ -146,6 +146,10 @@ msgstr "Absolutely! You can export your resume to PDF with a single click. The e
 msgid "Access your resumes and data programmatically using the API."
 msgstr "Access your resumes and data programmatically using the API."
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Adapt your resume to a role and employer with suggestions tuned for clarity and ATS-friendly wording."
+msgstr "Adapt your resume to a role and employer with suggestions tuned for clarity and ATS-friendly wording."
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Add a custom field"
 msgstr "Add a custom field"
@@ -256,6 +260,14 @@ msgstr "Afrikaans"
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "AI"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI features"
+msgstr "AI features"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "AI resume assistant"
+msgstr "AI resume assistant"
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "AI returned some invalid references"
@@ -479,6 +491,10 @@ msgstr "Border Radius"
 msgid "Border Width"
 msgstr "Border Width"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Bring your own API keys"
+msgstr "Bring your own API keys"
+
 #: src/components/command-palette/index.tsx
 msgid "Builder Command Palette"
 msgstr "Builder Command Palette"
@@ -582,6 +598,10 @@ msgstr "Changed your mind? Rename your resume to something more descriptive."
 msgid "Changelog"
 msgstr "Changelog"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Chat with an assistant that refines your content and applies edits safely to your resume."
+msgstr "Chat with an assistant that refines your content and applies edits safely to your resume."
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Check your email for a link to reset your password."
 msgstr "Check your email for a link to reset your password."
@@ -650,6 +670,10 @@ msgstr "Confirm"
 #: src/routes/dashboard/settings/authentication/-components/social-provider.tsx
 msgid "Connect"
 msgstr "Connect"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Connect OpenAI, Google, Anthropic, or a local Ollama model—your keys stay on your side when you self-host."
+msgstr "Connect OpenAI, Google, Anthropic, or a local Ollama model—your keys stay on your side when you self-host."
 
 #: src/dialogs/resume/sections/cover-letter.tsx
 #: src/dialogs/resume/sections/summary-item.tsx
@@ -1546,6 +1570,10 @@ msgstr "Job Search"
 msgid "Job Search API"
 msgstr "Job Search API"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Job-specific tailoring"
+msgstr "Job-specific tailoring"
+
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "JSearch aggregates job listings from multiple job boards using Google for Jobs. You can filter by country (ISO alpha-2 code), date posted, job type, remote options, and experience level."
 msgstr "JSearch aggregates job listings from multiple job boards using Google for Jobs. You can filter by country (ISO alpha-2 code), date posted, job type, remote options, and experience level."
@@ -1889,6 +1917,10 @@ msgstr "opens in new tab"
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Optimizing summary, experience, and skills for {0}"
 msgstr "Optimizing summary, experience, and skills for {0}"
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Optional intelligence that helps you write, import, and target your resume—enabled when you choose a model and add your own credentials."
+msgstr "Optional intelligence that helps you write, import, and target your resume—enabled when you choose a model and add your own credentials."
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -2499,6 +2531,10 @@ msgstr "Slovenian"
 msgid "Slug"
 msgstr "Slug"
 
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Smart import from PDF & Word"
+msgstr "Smart import from PDF & Word"
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -3005,6 +3041,10 @@ msgstr "Updating your password..."
 #: src/dialogs/resume/index.tsx
 msgid "Updating your resume..."
 msgstr "Updating your resume..."
+
+#: src/routes/_home/-sections/ai-features.tsx
+msgid "Upload an existing résumé and let AI extract structured data you can edit in the builder."
+msgstr "Upload an existing résumé and let AI extract structured data you can edit in the builder."
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Uploading picture..."
