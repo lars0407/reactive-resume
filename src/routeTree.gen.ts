@@ -27,6 +27,7 @@ import { Route as AuthOauthRouteImport } from "./routes/auth/oauth";
 import { Route as AuthLoginRouteImport } from "./routes/auth/login";
 import { Route as AuthForgotPasswordRouteImport } from "./routes/auth/forgot-password";
 import { Route as ApiHealthRouteImport } from "./routes/api/health";
+import { Route as HomeAiJobSearchRouteImport } from "./routes/_home/ai-job-search";
 import { Route as DotwellKnownOpenidConfigurationRouteImport } from "./routes/[.]well-known/openid-configuration";
 import { Route as DotwellKnownOauthProtectedResourceRouteImport } from "./routes/[.]well-known/oauth-protected-resource";
 import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from "./routes/[.]well-known/oauth-authorization-server";
@@ -137,6 +138,11 @@ const ApiHealthRoute = ApiHealthRouteImport.update({
   id: "/api/health",
   path: "/api/health",
   getParentRoute: () => rootRouteImport,
+} as any);
+const HomeAiJobSearchRoute = HomeAiJobSearchRouteImport.update({
+  id: "/ai-job-search",
+  path: "/ai-job-search",
+  getParentRoute: () => HomeRouteRoute,
 } as any);
 const DotwellKnownOpenidConfigurationRoute =
   DotwellKnownOpenidConfigurationRouteImport.update({
@@ -265,6 +271,7 @@ export interface FileRoutesByFullPath {
   "/.well-known/oauth-authorization-server": typeof DotwellKnownOauthAuthorizationServerRouteWithChildren;
   "/.well-known/oauth-protected-resource": typeof DotwellKnownOauthProtectedResourceRouteWithChildren;
   "/.well-known/openid-configuration": typeof DotwellKnownOpenidConfigurationRoute;
+  "/ai-job-search": typeof HomeAiJobSearchRoute;
   "/api/health": typeof ApiHealthRoute;
   "/auth/forgot-password": typeof AuthForgotPasswordRoute;
   "/auth/login": typeof AuthLoginRoute;
@@ -301,6 +308,7 @@ export interface FileRoutesByTo {
   "/.well-known/oauth-authorization-server": typeof DotwellKnownOauthAuthorizationServerRouteWithChildren;
   "/.well-known/oauth-protected-resource": typeof DotwellKnownOauthProtectedResourceRouteWithChildren;
   "/.well-known/openid-configuration": typeof DotwellKnownOpenidConfigurationRoute;
+  "/ai-job-search": typeof HomeAiJobSearchRoute;
   "/api/health": typeof ApiHealthRoute;
   "/auth/forgot-password": typeof AuthForgotPasswordRoute;
   "/auth/login": typeof AuthLoginRoute;
@@ -343,6 +351,7 @@ export interface FileRoutesById {
   "/.well-known/oauth-authorization-server": typeof DotwellKnownOauthAuthorizationServerRouteWithChildren;
   "/.well-known/oauth-protected-resource": typeof DotwellKnownOauthProtectedResourceRouteWithChildren;
   "/.well-known/openid-configuration": typeof DotwellKnownOpenidConfigurationRoute;
+  "/_home/ai-job-search": typeof HomeAiJobSearchRoute;
   "/api/health": typeof ApiHealthRoute;
   "/auth/forgot-password": typeof AuthForgotPasswordRoute;
   "/auth/login": typeof AuthLoginRoute;
@@ -386,6 +395,7 @@ export interface FileRouteTypes {
     | "/.well-known/oauth-authorization-server"
     | "/.well-known/oauth-protected-resource"
     | "/.well-known/openid-configuration"
+    | "/ai-job-search"
     | "/api/health"
     | "/auth/forgot-password"
     | "/auth/login"
@@ -422,6 +432,7 @@ export interface FileRouteTypes {
     | "/.well-known/oauth-authorization-server"
     | "/.well-known/oauth-protected-resource"
     | "/.well-known/openid-configuration"
+    | "/ai-job-search"
     | "/api/health"
     | "/auth/forgot-password"
     | "/auth/login"
@@ -463,6 +474,7 @@ export interface FileRouteTypes {
     | "/.well-known/oauth-authorization-server"
     | "/.well-known/oauth-protected-resource"
     | "/.well-known/openid-configuration"
+    | "/_home/ai-job-search"
     | "/api/health"
     | "/auth/forgot-password"
     | "/auth/login"
@@ -642,6 +654,13 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof ApiHealthRouteImport;
       parentRoute: typeof rootRouteImport;
     };
+    "/_home/ai-job-search": {
+      id: "/_home/ai-job-search";
+      path: "/ai-job-search";
+      fullPath: "/ai-job-search";
+      preLoaderRoute: typeof HomeAiJobSearchRouteImport;
+      parentRoute: typeof HomeRouteRoute;
+    };
     "/.well-known/openid-configuration": {
       id: "/.well-known/openid-configuration";
       path: "/.well-known/openid-configuration";
@@ -793,10 +812,12 @@ declare module "@tanstack/react-router" {
 }
 
 interface HomeRouteRouteChildren {
+  HomeAiJobSearchRoute: typeof HomeAiJobSearchRoute;
   HomeIndexRoute: typeof HomeIndexRoute;
 }
 
 const HomeRouteRouteChildren: HomeRouteRouteChildren = {
+  HomeAiJobSearchRoute: HomeAiJobSearchRoute,
   HomeIndexRoute: HomeIndexRoute,
 };
 

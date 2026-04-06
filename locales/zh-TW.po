@@ -270,6 +270,19 @@ msgstr "AI"
 msgid "AI features"
 msgstr ""
 
+#: src/routes/_home/-sections/header.tsx
+#: src/routes/_home/ai-job-search.tsx
+msgid "AI Job Search"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "AI Job Search — Reactive Resume"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "AI Job Search brings discovery and tailoring together: find roles, open the details that matter, and let your assistant reshape your resume for that specific posting—without leaving Reactive Resume."
+msgstr ""
+
 #: src/routes/_home/-sections/ai-features.tsx
 msgid "AI resume assistant"
 msgstr ""
@@ -446,6 +459,10 @@ msgstr "獎項"
 #: src/utils/locale.ts
 msgid "Azerbaijani"
 msgstr "亞塞拜然語"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Back to home"
+msgstr ""
 
 #: src/routes/auth/verify-2fa.tsx
 msgid "Back to Login"
@@ -1070,6 +1087,10 @@ msgstr "將段落拖曳到這裡，以在不同欄之間移動它們"
 msgid "Duplicate"
 msgstr "複製"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Duplicate a resume and apply structured AI suggestions so your highlights align with the role and employer."
+msgstr ""
+
 #: src/dialogs/resume/index.tsx
 msgid "Duplicate Resume"
 msgstr "複製履歷"
@@ -1097,6 +1118,10 @@ msgstr "例如：50000"
 #: src/routes/dashboard/job-search/index.tsx
 msgid "e.g. frontend developer jobs in Berlin"
 msgstr "例如：在柏林的前端開發人員工作"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Edit safely in the builder"
+msgstr ""
 
 #: src/dialogs/resume/sections/custom.tsx
 #: src/utils/resume/section.tsx
@@ -1565,6 +1590,10 @@ msgstr "斜體"
 msgid "Japanese"
 msgstr "日文"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Job listings require a configured provider key in settings. AI tailoring uses your own model credentials when enabled."
+msgstr ""
+
 #: src/routes/dashboard/-components/sidebar.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Job Search"
@@ -1907,6 +1936,10 @@ msgstr "開啟"
 msgid "Open Email Client"
 msgstr "開啟電子郵件用戶端"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Open Job Search"
+msgstr ""
+
 #: src/routes/_home/-sections/features.tsx
 msgid "Open Source"
 msgstr "開放原始碼"
@@ -2129,6 +2162,10 @@ msgstr "出版品"
 msgid "Publisher"
 msgstr "出版者"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Query jobs with filters that match how you work, powered by the same Job Search experience in your dashboard."
+msgstr ""
+
 #. placeholder {0}: quota.remaining
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Quota: {0} remaining"
@@ -2284,6 +2321,10 @@ msgstr "履歷"
 msgid "Retry"
 msgstr "重試"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Review every change in the resume editor, then export or share when you are ready."
+msgstr ""
+
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
 msgstr "靠右對齊"
@@ -2354,6 +2395,14 @@ msgstr "搜尋圖示"
 #: src/components/command-palette/pages/resumes.tsx
 msgid "Search for..."
 msgstr "搜尋履歷…"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Search listings, shortlist roles, and tailor your resume with AI — integrated into Reactive Resume."
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Search real listings"
+msgstr ""
 
 #: src/components/ui/combobox.tsx
 msgid "Search..."
@@ -2464,6 +2513,10 @@ msgstr "側邊欄寬度"
 #: src/routes/auth/login.tsx
 msgid "Sign in"
 msgstr "登入"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Sign in to try it"
+msgstr ""
 
 #: src/routes/auth/login.tsx
 msgid "Sign in to your account"
@@ -2656,6 +2709,10 @@ msgstr "標籤可用來依關鍵詞替履歷分類。"
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Tailor Resume"
 msgstr "裁縫簡歷"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Tailor with AI"
+msgstr ""
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Tailoring failed"
@@ -2850,6 +2907,10 @@ msgstr "翻譯"
 #: src/utils/locale.ts
 msgid "Turkish"
 msgstr "土耳其語"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Turn job listings into tailored resumes"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."

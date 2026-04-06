@@ -265,6 +265,19 @@ msgstr ""
 msgid "AI features"
 msgstr ""
 
+#: src/routes/_home/-sections/header.tsx
+#: src/routes/_home/ai-job-search.tsx
+msgid "AI Job Search"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "AI Job Search — Reactive Resume"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "AI Job Search brings discovery and tailoring together: find roles, open the details that matter, and let your assistant reshape your resume for that specific posting—without leaving Reactive Resume."
+msgstr ""
+
 #: src/routes/_home/-sections/ai-features.tsx
 msgid "AI resume assistant"
 msgstr ""
@@ -440,6 +453,10 @@ msgstr ""
 
 #: src/utils/locale.ts
 msgid "Azerbaijani"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Back to home"
 msgstr ""
 
 #: src/routes/auth/verify-2fa.tsx
@@ -1065,6 +1082,10 @@ msgstr ""
 msgid "Duplicate"
 msgstr ""
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Duplicate a resume and apply structured AI suggestions so your highlights align with the role and employer."
+msgstr ""
+
 #: src/dialogs/resume/index.tsx
 msgid "Duplicate Resume"
 msgstr ""
@@ -1091,6 +1112,10 @@ msgstr ""
 
 #: src/routes/dashboard/job-search/index.tsx
 msgid "e.g. frontend developer jobs in Berlin"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Edit safely in the builder"
 msgstr ""
 
 #: src/dialogs/resume/sections/custom.tsx
@@ -1560,6 +1585,10 @@ msgstr ""
 msgid "Japanese"
 msgstr ""
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Job listings require a configured provider key in settings. AI tailoring uses your own model credentials when enabled."
+msgstr ""
+
 #: src/routes/dashboard/-components/sidebar.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Job Search"
@@ -1902,6 +1931,10 @@ msgstr ""
 msgid "Open Email Client"
 msgstr ""
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Open Job Search"
+msgstr ""
+
 #: src/routes/_home/-sections/features.tsx
 msgid "Open Source"
 msgstr ""
@@ -2124,6 +2157,10 @@ msgstr ""
 msgid "Publisher"
 msgstr ""
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Query jobs with filters that match how you work, powered by the same Job Search experience in your dashboard."
+msgstr ""
+
 #. placeholder {0}: quota.remaining
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Quota: {0} remaining"
@@ -2279,6 +2316,10 @@ msgstr ""
 msgid "Retry"
 msgstr ""
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Review every change in the resume editor, then export or share when you are ready."
+msgstr ""
+
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
 msgstr ""
@@ -2348,6 +2389,14 @@ msgstr ""
 
 #: src/components/command-palette/pages/resumes.tsx
 msgid "Search for..."
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Search listings, shortlist roles, and tailor your resume with AI — integrated into Reactive Resume."
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Search real listings"
 msgstr ""
 
 #: src/components/ui/combobox.tsx
@@ -2458,6 +2507,10 @@ msgstr ""
 
 #: src/routes/auth/login.tsx
 msgid "Sign in"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Sign in to try it"
 msgstr ""
 
 #: src/routes/auth/login.tsx
@@ -2652,6 +2705,10 @@ msgstr ""
 msgid "Tailor Resume"
 msgstr ""
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Tailor with AI"
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Tailoring failed"
 msgstr ""
@@ -2844,6 +2901,10 @@ msgstr ""
 
 #: src/utils/locale.ts
 msgid "Turkish"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Turn job listings into tailored resumes"
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx

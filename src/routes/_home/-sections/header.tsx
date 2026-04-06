@@ -1,4 +1,5 @@
 import { t } from "@lingui/core/macro";
+import { Trans } from "@lingui/react/macro";
 import { ArrowRightIcon, TranslateIcon } from "@phosphor-icons/react";
 import { Link } from "@tanstack/react-router";
 import { motion, useMotionValue, useSpring } from "motion/react";
@@ -56,6 +57,13 @@ export function Header() {
       <nav aria-label={t`Main navigation`} className="container mx-auto flex items-center gap-x-4 p-3 lg:px-12">
         <Link to="/" className="transition-opacity hover:opacity-80" aria-label={t`Reactive Resume - Go to homepage`}>
           <BrandIcon className="size-10" />
+        </Link>
+
+        <Link
+          to="/ai-job-search"
+          className="ml-4 hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
+        >
+          <Trans>AI Job Search</Trans>
         </Link>
 
         <div className="ml-auto flex items-center gap-x-2">
