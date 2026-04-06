@@ -72,6 +72,14 @@ msgstr "{column, plural, one {# स्तम्भ} other {# स्तम्भ�
 msgid "{diffDays} days ago"
 msgstr "{diffDays} केही दिनअघि"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "{PROJECTS_COUNT, plural, one {# project selected} other {# projects selected}}"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "{SEARCH_LINKS_COUNT, plural, one {# search link} other {# search links}}"
+msgstr ""
+
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "{used} of {limit} requests used ({remaining} remaining)"
 msgstr "{used} {limit} द्वारा प्रयोग गरिएका अनुरोधहरू ({remaining} बाँकी)"
@@ -88,6 +96,14 @@ msgstr "<0>प्रायः</0><1>सोधिने</1><2>प्रश्न�
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "<0>Thank you for using Reactive Resume! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If Reactive Resume has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
 msgstr "<0>Reactive Resume प्रयोग गर्नुभएकोमा धन्यवाद! यो एप माया र समर्पणको परिणाम हो, जुन प्रायः मैले आफ्नो खाली समयमा संसारभरिका खुला-स्रोत योगदानकर्ताहरूको अद्भुत सहयोगका साथ बनाएँ।</0><1>यदि Reactive Resume ले तपाईंलाई मद्दत गरेको छ र तपाईं यसलाई सबैका लागि निःशुल्क र खुला राख्न सहयोग गर्न चाहनुहुन्छ भने, कृपया दान गर्ने बारेमा विचार गर्नुहोस्। तपाईंको सानो योगदान पनि अत्यन्तै कदर गरिन्छ!</1>"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "<0>Welcome back.</0> Jobs are like buses—miss one, and another comes. Let’s not miss this one."
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "0 selected"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 msgid "1 month"
@@ -253,6 +269,10 @@ msgstr "अघिल्लो पङ्क्ति थप्नुहोस्"
 msgid "Added {0} new skills to your original resume"
 msgstr "तपाईंको मूल रिजुमेमा नयाँ सीपहरू थपियो: {0}"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Additional queues use the same layout in the product — this page only demonstrates the Ready view."
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Advanced Filters"
 msgstr "उन्नत फिल्टरहरू"
@@ -280,10 +300,6 @@ msgstr ""
 msgid "AI Job Search — Reactive Resume"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "AI Job Search brings discovery and tailoring together: find roles, open the details that matter, and let your assistant reshape your resume for that specific posting—without leaving Reactive Resume."
-msgstr ""
-
 #: src/routes/_home/-sections/ai-features.tsx
 msgid "AI resume assistant"
 msgstr ""
@@ -295,6 +311,10 @@ msgstr "एआईले केही अमान्य सन्दर्भह
 #: src/utils/locale.ts
 msgid "Albanian"
 msgstr "अल्बानियन"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "All Jobs"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Allow Public Access"
@@ -376,6 +396,10 @@ msgstr "एप"
 #: src/routes/_home/-sections/statistics.tsx
 msgid "Application Statistics"
 msgstr "अनुप्रयोग तथ्याङ्क"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Applied"
+msgstr ""
 
 #: src/routes/dashboard/job-search/-components/job-detail.tsx
 msgid "Apply"
@@ -901,6 +925,10 @@ msgstr "खतराको क्षेत्र (Danger Zone)"
 msgid "Danish"
 msgstr "डेनिस"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "daogames GmbH"
+msgstr ""
+
 #: src/components/user/dropdown-menu.tsx
 #: src/utils/theme.ts
 msgid "Dark"
@@ -1025,6 +1053,10 @@ msgstr "विच्छेद गर्नुहोस्"
 msgid "Discord"
 msgstr "डिस्कोर्ड"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Discovered"
+msgstr ""
+
 #: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Documentation"
@@ -1063,6 +1095,7 @@ msgstr "DOCX डाउनलोड गर्नुहोस्"
 msgid "Download JSON"
 msgstr "JSON डाउनलोड गर्नुहोस्"
 
+#: src/routes/_home/ai-job-search.tsx
 #: src/routes/builder/$resumeId/-components/dock.tsx
 msgid "Download PDF"
 msgstr "PDF डाउनलोड गर्नुहोस्"
@@ -1087,10 +1120,6 @@ msgstr "खण्डहरू स्तम्भहरू बीच सार्
 #: src/routes/dashboard/resumes/-components/menus/dropdown-menu.tsx
 msgid "Duplicate"
 msgstr "नक्कल (Duplicate) गर्नुहोस्"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Duplicate a resume and apply structured AI suggestions so your highlights align with the role and employer."
-msgstr ""
 
 #: src/dialogs/resume/index.tsx
 msgid "Duplicate Resume"
@@ -1119,10 +1148,6 @@ msgstr "जस्तै ५००००"
 #: src/routes/dashboard/job-search/index.tsx
 msgid "e.g. frontend developer jobs in Berlin"
 msgstr "जस्तै बर्लिनमा फ्रन्टएन्ड डेभलपरका जागिरहरू"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Edit safely in the builder"
-msgstr ""
 
 #: src/dialogs/resume/sections/custom.tsx
 #: src/utils/resume/section.tsx
@@ -1221,6 +1246,14 @@ msgstr "यहाँ प्रविष्ट गरिएका सबै क�
 msgid "Everything you need to create, customize, and share professional resumes. Built with privacy in mind, powered by open source, and completely free forever."
 msgstr "व्यावसायिक बायोडाटा बनाउन, अनुकूल बनाउन र सेयर गर्न आवश्यक सबै कुरा एकै ठाउँमा। गोपनीयतालाई प्राथमिकता दिँदै, खुला-स्रोतको सहायतामा निर्माण गरिएको, र पूर्ण रूपमा निःशुल्क, सधैंका लागि।"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Example Corp"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Example saved searches and listing URLs will appear here in the app."
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/use-job-search.ts
 msgid "Exclude {value}"
 msgstr "बाहिर राख्नुहोस् {value}"
@@ -1260,6 +1293,10 @@ msgstr "विभिन्न शैली, पेशा र व्यक्त�
 msgid "Explore the API documentation to learn how to integrate Reactive Resume with your applications. Find detailed endpoints, request examples, and authentication methods."
 msgstr "Reactive Resume लाई आफ्नो अनुप्रयोगहरूसँग कसरी एकीकृत गर्ने भनेर सिक्न API प्रलेखन (documentation) हेर्नुहोस्। यहाँ विस्तृत endpoint हरू, अनुरोधका उदाहरणहरू, र प्रमाणीकरणका तरिकाहरू फेला पार्नुहुनेछ।"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Explore the workflow: scan roles, read an AI fit assessment, refine your summary, and move a job to applied when you are ready — built for both light and dark themes."
+msgstr ""
+
 #: src/utils/resume/section.tsx
 msgid "Export"
 msgstr "निर्यात"
@@ -1289,9 +1326,17 @@ msgstr "विशेषताहरू"
 msgid "Filter by"
 msgstr "यसद्वारा फिल्टर गर्नुहोस्"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Filters"
+msgstr ""
+
 #: src/utils/locale.ts
 msgid "Finnish"
 msgstr "फिनिस"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Fit assessment"
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Flexibility"
@@ -1376,6 +1421,10 @@ msgstr "अनियमित (random) नाम सिर्जना गर्
 msgid "German"
 msgstr "जर्मन"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Germany | Remote"
+msgstr ""
+
 #: src/routes/_home/-sections/hero.tsx
 msgid "Get Started"
 msgstr "सुरु गर्नुहोस्"
@@ -1383,6 +1432,10 @@ msgstr "सुरु गर्नुहोस्"
 #: src/routes/dashboard/settings/job-search.tsx
 msgid "Get your API key from RapidAPI by subscribing to the JSearch API."
 msgstr "JSearch API को सदस्यता लिएर RapidAPI बाट आफ्नो API कुञ्जी प्राप्त गर्नुहोस्।"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Ghostwriter"
+msgstr ""
 
 #: src/components/layout/not-found-screen.tsx
 #: src/routes/auth/verify-2fa-backup.tsx
@@ -1515,6 +1568,10 @@ msgstr "मेरो डाटा कसरी सुरक्षित हु�
 msgid "Hungarian"
 msgstr "हंगेरीयाली"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Hybrid · Berlin"
+msgstr ""
+
 #: src/components/level/combobox.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Icon"
@@ -1563,6 +1620,10 @@ msgstr "टेबल घुसाउनुहोस्"
 msgid "Interests"
 msgstr "रुचिहरू"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Interface preview"
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Intern"
 msgstr "अन्तर्वार्ताकर्ता"
@@ -1592,7 +1653,7 @@ msgid "Japanese"
 msgstr "जापानी"
 
 #: src/routes/_home/ai-job-search.tsx
-msgid "Job listings require a configured provider key in settings. AI tailoring uses your own model credentials when enabled."
+msgid "Job listings use your configured provider. AI features use your own model credentials when enabled in settings."
 msgstr ""
 
 #: src/routes/dashboard/-components/sidebar.tsx
@@ -1738,6 +1799,10 @@ msgstr "ल्याइट थिम"
 msgid "Line Height"
 msgstr "लाइन उचाइ (Line Height)"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Link resumes or projects to track how you pitch each role."
+msgstr ""
+
 #: src/routes/dashboard/settings/authentication/-components/hooks.tsx
 msgid "Linking your {providerName} account..."
 msgstr "तपाईंको {providerName} खाता जोडिँदैछ..."
@@ -1811,6 +1876,14 @@ msgstr "मार्जिन (तेर्सो)"
 msgid "Margin (Vertical)"
 msgstr "मार्जिन (ठाडो)"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Mark applied"
+msgstr ""
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Match score {DEMO_SCORE}"
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Maximum Salary"
 msgstr "अधिकतम तलब"
@@ -1823,9 +1896,17 @@ msgstr "न्यूनतम तलब"
 msgid "Model"
 msgstr "मोडेल"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "More actions"
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "More than 3 years"
 msgstr "३ वर्षभन्दा बढी"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Motivated aspiring web developer eager to contribute to daogames GmbH's products through hands-on internship experience, collaborative development, and continuous learning in a remote-first team."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "Move to"
@@ -1936,6 +2017,10 @@ msgstr "खोल्नुहोस्"
 #: src/routes/auth/forgot-password.tsx
 msgid "Open Email Client"
 msgstr "इमेल क्लाइन्ट खोल्नुहोस्"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Open job listing"
+msgstr ""
 
 #: src/routes/_home/ai-job-search.tsx
 msgid "Open Job Search"
@@ -2163,10 +2248,6 @@ msgstr "प्रकाशनहरू"
 msgid "Publisher"
 msgstr "प्रकाशक"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Query jobs with filters that match how you work, powered by the same Job Search experience in your dashboard."
-msgstr ""
-
 #. placeholder {0}: quota.remaining
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Quota: {0} remaining"
@@ -2200,6 +2281,11 @@ msgstr "Reactive Resume आज Product Hunt मा सार्वजनिक �
 msgid "Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
 msgstr "Reactive Resume खुला-स्रोत, गोपनीयता-केन्द्रित र पूर्ण रूपमा निःशुल्क छ। अन्य बायोडाटा निर्माण गर्ने साधनहरूको विपरीत, यसले विज्ञापन देखाउँदैन, तपाईंको डाटा ट्र्याक गर्दैन, वा सुविधालाई भुक्तानी पछाडि थुन्न्दैन।"
 
+#: src/routes/_home/ai-job-search.tsx
+#: src/routes/_home/ai-job-search.tsx
+msgid "Ready"
+msgstr ""
+
 #: src/dialogs/resume/sections/cover-letter.tsx
 msgid "Recipient"
 msgstr "प्राप्तकर्ता"
@@ -2230,6 +2316,7 @@ msgstr "रिफ्रेस गर्नुहोस्"
 msgid "Remember your password? <0/>"
 msgstr "पासवर्ड सम्झनुभयो? <0/>"
 
+#: src/routes/_home/ai-job-search.tsx
 #: src/routes/dashboard/job-search/-components/job-card.tsx
 #: src/routes/dashboard/job-search/-components/job-detail.tsx
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
@@ -2322,10 +2409,6 @@ msgstr "बायोडाटाहरू"
 msgid "Retry"
 msgstr "पुनः प्रयास गर्नुहोस्"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Review every change in the resume editor, then export or share when you are ready."
-msgstr ""
-
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
 msgstr "दायाँतिर क्रमबद्ध (Right Align)"
@@ -2345,6 +2428,10 @@ msgstr "घुमाउने कोण (Rotation)"
 #: src/utils/locale.ts
 msgid "Russian"
 msgstr "रुसियन"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Sample AI job search layout. Interactive elements are for demonstration."
+msgstr ""
 
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
@@ -2379,6 +2466,7 @@ msgstr "तलको QR कोड तपाईंको मनपर्ने au
 msgid "School"
 msgstr "विद्यालय/शैक्षिक संस्था"
 
+#: src/routes/_home/ai-job-search.tsx
 #: src/routes/dashboard/job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Search"
@@ -2398,11 +2486,7 @@ msgid "Search for..."
 msgstr "यसको लागि खोज्नुहोस्..."
 
 #: src/routes/_home/ai-job-search.tsx
-msgid "Search listings, shortlist roles, and tailor your resume with AI — integrated into Reactive Resume."
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Search real listings"
+msgid "Search listings, review fit, generate tailored summaries, and track applications — integrated into Reactive Resume."
 msgstr ""
 
 #: src/components/ui/combobox.tsx
@@ -2424,6 +2508,10 @@ msgstr "खण्ड प्रकार"
 msgid "Select a resume to tailor for \"{0}\" at {1}. A copy will be created{2}"
 msgstr "{1}मा \"{0}\" का लागि अनुकूलन गर्न एउटा रिजुमे चयन गर्नुहोस्।{2} मा एक प्रतिलिपि सिर्जना गरिनेछ।"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Select all filtered"
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Select country"
 msgstr "देश छान्नुहोस्"
@@ -2443,6 +2531,10 @@ msgstr "पासवर्ड रिसेट इमेल पठाउनुह
 #: src/routes/auth/forgot-password.tsx
 msgid "Sending password reset email..."
 msgstr "पासवर्ड रिसेट इमेल पठाइँदैछ..."
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Senior Frontend Engineer"
+msgstr ""
 
 #: src/components/input/rich-input.tsx
 msgid "Separator"
@@ -2622,6 +2714,10 @@ msgstr "स्पेसिङ (ठाडो)"
 msgid "Spanish"
 msgstr "स्पेनी"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "Sponsor not found"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Sponsors"
 msgstr "प्रायोजकहरू (Sponsors)"
@@ -2652,6 +2748,10 @@ msgstr "नाम राखेर आफ्नो बायोडाटा ब�
 #: src/routes/dashboard/resumes/-components/list-view.tsx
 msgid "Start building your resume from scratch"
 msgstr "सुरुदेखि नयाँ बायोडाटा बनाउन सुरु गर्नुहोस्"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Startup jobs"
+msgstr ""
 
 #: src/utils/resume/section.tsx
 msgid "Statistics"
@@ -2712,7 +2812,7 @@ msgid "Tailor Resume"
 msgstr "सिलाइ गर्ने बायोडाटा"
 
 #: src/routes/_home/ai-job-search.tsx
-msgid "Tailor with AI"
+msgid "Tailored summary"
 msgstr ""
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
@@ -2787,6 +2887,10 @@ msgstr "तपाईंले प्रविष्ट गर्नुभएक�
 #: src/routes/auth/resume-password.tsx
 msgid "The resume you are trying to access is password protected"
 msgstr "तपाईं पहुँच गर्न खोजिरहनुभएको बायोडाटा पासवर्डद्वारा सुरक्षित गरिएको छ"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "The role is entry-level and remote-friendly, which supports flexibility. Until your profile lists relevant web development skills and concrete experience, fit stays tentative—add internships, projects, or coursework so the assessment can strengthen."
+msgstr ""
 
 #: src/components/input/rich-input.tsx
 msgid "The URL you entered is not valid."
@@ -2899,6 +3003,10 @@ msgstr "आज"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Track your resume's views and downloads"
 msgstr "तपाईंको बायोडाटाका हेर्ने र डाउनलोड गर्ने तथ्याङ्कहरू ट्र्याक गर्नुहोस्"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Tracker off"
+msgstr ""
 
 #: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
@@ -3173,6 +3281,10 @@ msgstr "पासवर्ड रिसेट गर्दा इमेल य�
 msgid "Vietnamese"
 msgstr "भियतनामी"
 
+#: src/routes/_home/ai-job-search.tsx
+msgid "View"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Views"
 msgstr "हेर्ने संख्या (Views)"
@@ -3181,6 +3293,10 @@ msgstr "हेर्ने संख्या (Views)"
 #: src/utils/resume/section.tsx
 msgid "Volunteer"
 msgstr "स्वयंसेवक"
+
+#: src/routes/_home/ai-job-search.tsx
+msgid "Web Developer Intern"
+msgstr ""
 
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
