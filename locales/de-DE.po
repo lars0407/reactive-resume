@@ -706,10 +706,13 @@ msgstr "Unternehmen"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Vollständig kostenlos, für immer, ohne versteckte Kosten."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Jobsuche konfigurieren"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "Drehung"
 msgid "Russian"
 msgstr "Russisch"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "Der Befehl, den du suchst, existiert nicht."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "Der Inhalt ist zu hoch für diese Seite. Dies kann beim Exportieren als PDF zu unerwünschten Ergebnissen führen."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "Das eingegebene Passwort ist falsch"
@@ -2958,6 +2969,10 @@ msgstr "Diese Aktion kann nicht rückgängig gemacht werden."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "Diese Aktion kann nicht rückgängig gemacht werden. Alle Ihre Daten werden dauerhaft gelöscht."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "Titel"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "Um Ihr Konto zu löschen, müssen Sie den Bestätigungstext eingeben und unten auf die Schaltfläche klicken."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Um nach Stellenangeboten zu suchen, müssen Sie Ihren RapidAPI-Schlüssel in den Einstellungen konfigurieren."

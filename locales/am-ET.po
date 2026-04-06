@@ -706,9 +706,12 @@ msgstr "ኩባንያ"
 msgid "Completely free, forever, no hidden costs."
 msgstr "ፍጹም ነፃ፣ ለዘላለም፣ ምንም የተደበቀ ወጪ የለም።"
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
 msgstr ""
 
 #: src/dialogs/api-key/create.tsx
@@ -2475,6 +2478,10 @@ msgstr "ማሽከርከር"
 msgid "Russian"
 msgstr "ሩስኛ"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "የሚፈልጉት ትእዛዝ የለም።"
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "ይዘቱ ለዚህ ገፅ በጣም ረዝም ነው፣ ይህ በ PDF ለመላክ በሚሞከርበት ጊዜ አያስፈልጉ ውጤቶችን ሊያስከትል ይችላል።"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "ያስገቡት የይለፍ ቃል ትክክል አይደለም"
@@ -2958,6 +2969,10 @@ msgstr "ይህ ተግባር መቀለብ አይቻልም።"
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "ይህ ተግባር መቀለብ አይቻልም። ሁሉም መረጃዎ በእርስዎ ዘርፍ ይሰረዛል።"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "ርዕስ"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "መለያዎን ለመሰረዝ የማረጋገጫ ጽሑፍን ያስገቡ እና ከታች ያለውን አዝራር ይጫኑ።"
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr ""

@@ -706,10 +706,13 @@ msgstr "Įmonė"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Visiškai nemokama, visada, be jokių paslėptų mokesčių."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Konfigūruoti darbo paiešką"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "Sukimas"
 msgid "Russian"
 msgstr "Rusų"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "Tokios komandos nėra."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "Turinys yra per aukštas šiam puslapiui, tai gali sukelti nepageidaujamus rezultatus eksportuojant į PDF."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "Neteisingas slaptažodis"
@@ -2958,6 +2969,10 @@ msgstr "Šio veiksmo anuliuoti neįmanoma."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "Šio veiksmo anuliuoti neįmanoma. Visi jūsų duomenys bus negrįžtamai ištrinti."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "Pavadinimas"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "Norėdami ištrinti paskyrą, įveskite patvirtinimo tekstą ir spustelėkite žemiau esantį mygtuką."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Norėdami ieškoti darbo skelbimų, turite sukonfigūruoti RapidAPI raktą nustatymuose."

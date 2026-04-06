@@ -17,7 +17,6 @@ import {
   XIcon,
 } from "@phosphor-icons/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 
 import { useCommandPaletteStore } from "@/components/command-palette/store";
@@ -42,11 +41,13 @@ import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Spinner } from "@/components/ui/spinner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useJobPipelineStore } from "@/integrations/jobs/pipeline-store";
 import { cn } from "@/utils/style";
 
 import { DashboardHeader } from "../-components/header";
 import { Route as DashboardRoute } from "../route";
+import { AI_JOB_SEARCH_PREVIEW_JOB_ID, aiJobSearchPreviewJob } from "./-constants/preview-job";
 import { JobDetailDescriptionSections } from "../job-search/-components/job-detail-description-sections";
 import { TailorDialog } from "../job-search/-components/tailor-dialog";
 import { countJobListingLinks, getQuotaStatus, isValidExternalUrl } from "../job-search/-components/job-utils";
@@ -117,9 +118,19 @@ function RouteComponent() {
     }
   }, [jobs, tab, appliedSet, savedSet]);
 
+  /** Without API, show one example row so the split layout matches the product UI. */
+  const jobsInView = useMemo(() => {
+    if (!isConfigured) return [aiJobSearchPreviewJob];
+    return filteredJobs;
+  }, [isConfigured, filteredJobs]);
+
   const selectedId = selectedJob?.job_id ?? null;
 
   useEffect(() => {
+    if (!isConfigured) {
+      selectJobInline(aiJobSearchPreviewJob);
+      return;
+    }
     const applied = new Set(appliedJobIds);
     const saved = new Set(savedJobIds);
     let list: JobResult[];
@@ -142,7 +153,7 @@ function RouteComponent() {
     }
     const stillHere = selectedId != null && list.some((j) => j.job_id === selectedId);
     if (!stillHere) selectJobInline(list[0]);
-  }, [tab, jobs, appliedJobIds, savedJobIds, selectedId, selectJobInline]);
+  }, [isConfigured, tab, jobs, appliedJobIds, savedJobIds, selectedId, selectJobInline]);
 
   const showFilterChips = useMemo(() => hasActiveFilters(filters), [filters]);
 
@@ -151,11 +162,11 @@ function RouteComponent() {
   };
 
   const toggleBulkAll = () => {
-    if (bulkSelected.size === filteredJobs.length) {
+    if (bulkSelected.size === jobsInView.length) {
       setBulkSelected(new Set());
       return;
     }
-    setBulkSelected(new Set(filteredJobs.map((j) => j.job_id)));
+    setBulkSelected(new Set(jobsInView.map((j) => j.job_id)));
   };
 
   const listingLinkCount = selectedJob ? countJobListingLinks(selectedJob) : 0;
@@ -185,264 +196,276 @@ function RouteComponent() {
       </p>
 
       {!isConfigured ? (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mx-auto flex max-w-xl flex-col items-center gap-y-4 py-12 text-center"
-        >
-          <MagnifyingGlassIcon className="size-12 text-muted-foreground" weight="light" />
-          <h2 className="text-lg font-medium">
-            <Trans>Configure Job Search</Trans>
-          </h2>
-          <p className="text-muted-foreground">
-            <Trans>To search for job listings, you need to configure your RapidAPI key in settings.</Trans>
-          </p>
-          <Button nativeButton={false} variant="outline" render={<Link to="/dashboard/settings/job-search" />}>
-            <Trans>Go to Settings</Trans>
-          </Button>
-        </motion.div>
-      ) : (
-        <>
-          <form onSubmit={handleSearch} className="flex flex-col gap-3 sm:flex-row sm:items-end">
-            <div className="flex flex-1 flex-col gap-y-2">
-              <Label htmlFor="ai-job-query">
-                <Trans>Search</Trans>
-              </Label>
-              <Input
-                id="ai-job-query"
-                name="ai-job-query"
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder={t`e.g. frontend developer jobs in Berlin`}
-                autoCorrect="off"
-                autoComplete="off"
-                spellCheck="false"
-              />
-            </div>
-            <Button type="submit" disabled={isPending} className="shrink-0">
-              {isPending ? <Spinner /> : <MagnifyingGlassIcon />}
-              <Trans>Search</Trans>
+        <Alert className="border-amber-500/40 bg-amber-500/5">
+          <MagnifyingGlassIcon className="text-amber-600 dark:text-amber-500" />
+          <AlertTitle>
+            <Trans>Configure Job Search to load live listings</Trans>
+          </AlertTitle>
+          <AlertDescription className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <span>
+              <Trans>
+                The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then
+                search for real jobs.
+              </Trans>
+            </span>
+            <Button nativeButton={false} variant="outline" className="shrink-0" render={<Link to="/dashboard/settings/job-search" />}>
+              <Trans>Go to Settings</Trans>
             </Button>
-          </form>
+          </AlertDescription>
+        </Alert>
+      ) : null}
 
-          <div ref={scrollRef} />
+      <form
+        onSubmit={(e) => {
+          if (!isConfigured) {
+            e.preventDefault();
+            return;
+          }
+          handleSearch(e);
+        }}
+        className="flex flex-col gap-3 sm:flex-row sm:items-end"
+      >
+        <div className="flex flex-1 flex-col gap-y-2">
+          <Label htmlFor="ai-job-query">
+            <Trans>Search</Trans>
+          </Label>
+          <Input
+            id="ai-job-query"
+            name="ai-job-query"
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={t`e.g. frontend developer jobs in Berlin`}
+            autoCorrect="off"
+            autoComplete="off"
+            spellCheck="false"
+            disabled={!isConfigured}
+          />
+        </div>
+        <Button type="submit" disabled={!isConfigured || isPending} className="shrink-0">
+          {isPending ? <Spinner /> : <MagnifyingGlassIcon />}
+          <Trans>Search</Trans>
+        </Button>
+      </form>
 
-          <SearchFilters filters={filters} onFiltersChange={setFilters} />
+      <div ref={scrollRef} />
 
-          {showFilterChips && (
-            <div className="flex flex-wrap items-center gap-2">
-              {activeFilterChips.map((chip) => (
-                <button
-                  key={`${chip.key}-${chip.value ?? chip.label}`}
-                  type="button"
-                  className="inline-flex items-center gap-1 rounded-full border bg-background px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
-                  onClick={() => removeFilter(chip.key, chip.value)}
-                >
-                  {chip.label}
-                  <XIcon className="size-3" />
-                </button>
-              ))}
-              <Button size="sm" variant="ghost" onClick={() => setFilters(initialFilterState)}>
-                <Trans>Clear all</Trans>
+      <fieldset disabled={!isConfigured} className="min-w-0 border-0 p-0">
+        <SearchFilters filters={filters} onFiltersChange={setFilters} />
+      </fieldset>
+
+      {showFilterChips && isConfigured && (
+        <div className="flex flex-wrap items-center gap-2">
+          {activeFilterChips.map((chip) => (
+            <button
+              key={`${chip.key}-${chip.value ?? chip.label}`}
+              type="button"
+              className="inline-flex items-center gap-1 rounded-full border bg-background px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => removeFilter(chip.key, chip.value)}
+            >
+              {chip.label}
+              <XIcon className="size-3" />
+            </button>
+          ))}
+          <Button size="sm" variant="ghost" onClick={() => setFilters(initialFilterState)}>
+            <Trans>Clear all</Trans>
+          </Button>
+        </div>
+      )}
+
+      {quota && isConfigured && (
+        <div className="flex items-center gap-2">
+          <Badge
+            variant="outline"
+            className={cn(
+              getQuotaStatus(quota) === "healthy" && "text-emerald-600",
+              getQuotaStatus(quota) === "warning" && "text-amber-600",
+              getQuotaStatus(quota) === "critical" && "text-red-600",
+            )}
+          >
+            <Trans>Quota: {quota.remaining} remaining</Trans>
+          </Badge>
+          <p className="text-xs text-muted-foreground">
+            <Trans>
+              {quota.used} / {quota.limit} requests used
+            </Trans>
+          </p>
+        </div>
+      )}
+
+      {isConfigured && error && !isPending && (
+        <div className="rounded-md border border-destructive/40 bg-destructive/5 p-4">
+          <div className="flex items-start gap-2">
+            <WarningCircleIcon className="mt-0.5 size-4 text-destructive" />
+            <div className="space-y-1">
+              <p className="text-sm font-medium text-destructive">
+                <Trans>Could not fetch jobs</Trans>
+              </p>
+              <p className="text-sm text-muted-foreground">{error}</p>
+              <Button size="sm" variant="outline" onClick={() => executeSearch(currentPage)}>
+                <Trans>Retry</Trans>
               </Button>
             </div>
-          )}
-
-          {quota && (
-            <div className="flex items-center gap-2">
-              <Badge
-                variant="outline"
-                className={cn(
-                  getQuotaStatus(quota) === "healthy" && "text-emerald-600",
-                  getQuotaStatus(quota) === "warning" && "text-amber-600",
-                  getQuotaStatus(quota) === "critical" && "text-red-600",
-                )}
-              >
-                <Trans>Quota: {quota.remaining} remaining</Trans>
-              </Badge>
-              <p className="text-xs text-muted-foreground">
-                <Trans>
-                  {quota.used} / {quota.limit} requests used
-                </Trans>
-              </p>
-            </div>
-          )}
-
-          {error && !isPending && (
-            <div className="rounded-md border border-destructive/40 bg-destructive/5 p-4">
-              <div className="flex items-start gap-2">
-                <WarningCircleIcon className="mt-0.5 size-4 text-destructive" />
-                <div className="space-y-1">
-                  <p className="text-sm font-medium text-destructive">
-                    <Trans>Could not fetch jobs</Trans>
-                  </p>
-                  <p className="text-sm text-muted-foreground">{error}</p>
-                  <Button size="sm" variant="outline" onClick={() => executeSearch(currentPage)}>
-                    <Trans>Retry</Trans>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {isPending && jobs.length === 0 && (
-            <div className="grid gap-3 sm:grid-cols-2">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <Skeleton key={index} className="h-24 rounded-lg" />
-              ))}
-            </div>
-          )}
-
-          {!isPending && hasSearched && jobs.length === 0 && (
-            <p className="py-8 text-center text-muted-foreground">
-              <Trans>No jobs found. Try a different search query.</Trans>
-            </p>
-          )}
-
-          {jobs.length > 0 && (
-            <Tabs
-              value={tab}
-              onValueChange={(v) => setTab(v as PipelineTab)}
-              className="flex min-h-0 flex-1 flex-col gap-3"
-            >
-              <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-                <TabsList variant="line" className="h-9 w-full justify-start lg:w-auto">
-                  <TabsTrigger value="ready">
-                    <Trans>Ready</Trans>
-                  </TabsTrigger>
-                  <TabsTrigger value="discovered">
-                    <Trans>Discovered</Trans>
-                  </TabsTrigger>
-                  <TabsTrigger value="applied">
-                    <Trans>Applied</Trans>
-                  </TabsTrigger>
-                  <TabsTrigger value="all">
-                    <Trans>All Jobs</Trans>
-                  </TabsTrigger>
-                </TabsList>
-
-                <div className="flex flex-wrap items-center gap-2">
-                  <Button variant="outline" size="sm" type="button" className="gap-2" onClick={openCommandPalette}>
-                    <MagnifyingGlassIcon className="size-4" aria-hidden />
-                    <Trans>Search</Trans>
-                    <KbdGroup className="ms-1" aria-hidden>
-                      <Kbd>Ctrl</Kbd>
-                      <Kbd>K</Kbd>
-                    </KbdGroup>
-                  </Button>
-                  <Button variant="outline" size="sm" type="button" className="gap-2" render={<Link to="/dashboard/job-search" />}>
-                    <FunnelSimpleIcon className="size-4" aria-hidden />
-                    <Trans>Classic job search</Trans>
-                  </Button>
-                </div>
-              </div>
-
-              <TabsContent value={tab} className="mt-0 flex min-h-0 flex-1 data-[state=inactive]:hidden">
-                {filteredJobs.length === 0 ? (
-                  <p className="rounded-lg border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
-                    <Trans>No jobs in this view for your current results. Try another tab or run a new search.</Trans>
-                  </p>
-                ) : (
-                  <div className="grid min-h-[28rem] flex-1 gap-4 overflow-hidden rounded-xl border border-border bg-card/30 lg:grid-cols-[minmax(260px,320px)_1fr] lg:gap-0 lg:divide-x lg:divide-border dark:bg-card/20">
-                    <div className="flex min-h-0 flex-col p-3 lg:max-h-[calc(100dvh-14rem)]">
-                      <div className="mb-2 flex items-center justify-between gap-2 border-b border-border pb-2">
-                        <button
-                          type="button"
-                          onClick={toggleBulkAll}
-                          className="flex items-center gap-2 text-left text-sm text-muted-foreground transition-colors hover:text-foreground"
-                        >
-                          <span
-                            className={cn(
-                              "flex size-4 shrink-0 items-center justify-center rounded-sm border border-input shadow-xs",
-                              bulkSelected.size === filteredJobs.length && filteredJobs.length > 0
-                                ? "bg-primary text-primary-foreground"
-                                : "bg-background",
-                            )}
-                            aria-hidden
-                          >
-                            {bulkSelected.size === filteredJobs.length && filteredJobs.length > 0 ? (
-                              <CheckIcon className="size-3" weight="bold" />
-                            ) : null}
-                          </span>
-                          <Trans>Select all filtered</Trans>
-                        </button>
-                        <span className="text-xs tabular-nums text-muted-foreground">{t`${bulkSelected.size} selected`}</span>
-                      </div>
-
-                      <ScrollArea className="min-h-0 flex-1 pr-2">
-                        <ul className="flex flex-col gap-2 pb-2">
-                          {filteredJobs.map((job) => (
-                            <li key={job.job_id}>
-                              <JobRow
-                                job={job}
-                                selected={selectedJob?.job_id === job.job_id}
-                                onSelect={() => selectJobInline(job)}
-                                saved={isSaved(job.job_id)}
-                                onToggleSaved={(e) => {
-                                  e.stopPropagation();
-                                  toggleSaved(job.job_id);
-                                }}
-                                score={job.job_apply_quality_score}
-                              />
-                            </li>
-                          ))}
-                        </ul>
-                      </ScrollArea>
-
-                      <div className="mt-2 flex items-center justify-center gap-x-3 border-t border-border pt-2">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          disabled={currentPage <= 1 || isPending}
-                          onClick={() => handlePageChange(currentPage - 1)}
-                        >
-                          <Trans>Previous</Trans>
-                        </Button>
-                        <span className="text-xs text-muted-foreground">
-                          <Trans>Page {currentPage}</Trans>
-                        </span>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          disabled={!hasMore || isPending}
-                          onClick={() => handlePageChange(currentPage + 1)}
-                        >
-                          <Trans>Next</Trans>
-                        </Button>
-                      </div>
-                    </div>
-
-                    <ScrollArea className="min-h-[20rem] min-w-0 lg:max-h-[calc(100dvh-14rem)]">
-                      <div className="space-y-4 p-3 md:p-4">
-                        {selectedJob ? (
-                          <SelectedJobPanel
-                            job={selectedJob}
-                            matchScore={matchScore}
-                            progressValue={progressValue}
-                            listingLinkCount={listingLinkCount}
-                            applied={isApplied(selectedJob.job_id)}
-                            tailorOpen={tailorOpen}
-                            setTailorOpen={setTailorOpen}
-                            onMarkApplied={() => markApplied(selectedJob.job_id)}
-                            onUnmarkApplied={() => unmarkApplied(selectedJob.job_id)}
-                            onToggleSaved={() => toggleSaved(selectedJob.job_id)}
-                            saved={isSaved(selectedJob.job_id)}
-                          />
-                        ) : (
-                          <p className="text-sm text-muted-foreground">
-                            <Trans>Select a job from the list.</Trans>
-                          </p>
-                        )}
-                      </div>
-                    </ScrollArea>
-                  </div>
-                )}
-              </TabsContent>
-            </Tabs>
-          )}
-        </>
+          </div>
+        </div>
       )}
+
+      {isConfigured && isPending && jobs.length === 0 && (
+        <div className="grid gap-3 sm:grid-cols-2">
+          {Array.from({ length: 4 }).map((_, index) => (
+            <Skeleton key={index} className="h-24 rounded-lg" />
+          ))}
+        </div>
+      )}
+
+      {isConfigured && !isPending && hasSearched && jobs.length === 0 && (
+        <p className="py-8 text-center text-muted-foreground">
+          <Trans>No jobs found. Try a different search query.</Trans>
+        </p>
+      )}
+
+      <Tabs
+        value={tab}
+        onValueChange={(v) => setTab(v as PipelineTab)}
+        className="flex min-h-0 flex-1 flex-col gap-3"
+      >
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+          <TabsList variant="line" className="h-9 w-full justify-start lg:w-auto">
+            <TabsTrigger value="ready">
+              <Trans>Ready</Trans>
+            </TabsTrigger>
+            <TabsTrigger value="discovered">
+              <Trans>Discovered</Trans>
+            </TabsTrigger>
+            <TabsTrigger value="applied">
+              <Trans>Applied</Trans>
+            </TabsTrigger>
+            <TabsTrigger value="all">
+              <Trans>All Jobs</Trans>
+            </TabsTrigger>
+          </TabsList>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <Button variant="outline" size="sm" type="button" className="gap-2" onClick={openCommandPalette}>
+              <MagnifyingGlassIcon className="size-4" aria-hidden />
+              <Trans>Search</Trans>
+              <KbdGroup className="ms-1" aria-hidden>
+                <Kbd>Ctrl</Kbd>
+                <Kbd>K</Kbd>
+              </KbdGroup>
+            </Button>
+            <Button variant="outline" size="sm" type="button" className="gap-2" render={<Link to="/dashboard/job-search" />}>
+              <FunnelSimpleIcon className="size-4" aria-hidden />
+              <Trans>Classic job search</Trans>
+            </Button>
+          </div>
+        </div>
+
+        <TabsContent value={tab} className="mt-0 flex min-h-0 flex-1 data-[state=inactive]:hidden">
+          {jobsInView.length === 0 ? (
+            <p className="rounded-lg border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
+              <Trans>No jobs in this view for your current results. Try another tab or run a new search.</Trans>
+            </p>
+          ) : (
+            <div className="grid min-h-[28rem] flex-1 gap-4 overflow-hidden rounded-xl border border-border bg-card/30 lg:grid-cols-[minmax(260px,320px)_1fr] lg:gap-0 lg:divide-x lg:divide-border dark:bg-card/20">
+              <div className="flex min-h-0 flex-col p-3 lg:max-h-[calc(100dvh-14rem)]">
+                <div className="mb-2 flex items-center justify-between gap-2 border-b border-border pb-2">
+                  <button
+                    type="button"
+                    onClick={toggleBulkAll}
+                    disabled={!isConfigured}
+                    className="flex items-center gap-2 text-left text-sm text-muted-foreground transition-colors hover:text-foreground disabled:pointer-events-none disabled:opacity-50"
+                  >
+                    <span
+                      className={cn(
+                        "flex size-4 shrink-0 items-center justify-center rounded-sm border border-input shadow-xs",
+                        bulkSelected.size === jobsInView.length && jobsInView.length > 0
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-background",
+                      )}
+                      aria-hidden
+                    >
+                      {bulkSelected.size === jobsInView.length && jobsInView.length > 0 ? (
+                        <CheckIcon className="size-3" weight="bold" />
+                      ) : null}
+                    </span>
+                    <Trans>Select all filtered</Trans>
+                  </button>
+                  <span className="text-xs tabular-nums text-muted-foreground">{t`${bulkSelected.size} selected`}</span>
+                </div>
+
+                <ScrollArea className="min-h-0 flex-1 pr-2">
+                  <ul className="flex flex-col gap-2 pb-2">
+                    {jobsInView.map((job) => (
+                      <li key={job.job_id}>
+                        <JobRow
+                          job={job}
+                          selected={selectedJob?.job_id === job.job_id}
+                          onSelect={() => selectJobInline(job)}
+                          saved={isSaved(job.job_id)}
+                          onToggleSaved={(e) => {
+                            e.stopPropagation();
+                            toggleSaved(job.job_id);
+                          }}
+                          score={job.job_apply_quality_score}
+                          showPipelineActions={job.job_id !== AI_JOB_SEARCH_PREVIEW_JOB_ID}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+
+                <div className="mt-2 flex items-center justify-center gap-x-3 border-t border-border pt-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    disabled={!isConfigured || currentPage <= 1 || isPending}
+                    onClick={() => handlePageChange(currentPage - 1)}
+                  >
+                    <Trans>Previous</Trans>
+                  </Button>
+                  <span className="text-xs text-muted-foreground">
+                    <Trans>Page {currentPage}</Trans>
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    disabled={!isConfigured || !hasMore || isPending}
+                    onClick={() => handlePageChange(currentPage + 1)}
+                  >
+                    <Trans>Next</Trans>
+                  </Button>
+                </div>
+              </div>
+
+              <ScrollArea className="min-h-[20rem] min-w-0 lg:max-h-[calc(100dvh-14rem)]">
+                <div className="space-y-4 p-3 md:p-4">
+                  {selectedJob ? (
+                    <SelectedJobPanel
+                      job={selectedJob}
+                      isPreview={selectedJob.job_id === AI_JOB_SEARCH_PREVIEW_JOB_ID}
+                      matchScore={matchScore}
+                      progressValue={progressValue}
+                      listingLinkCount={listingLinkCount}
+                      applied={isApplied(selectedJob.job_id)}
+                      tailorOpen={tailorOpen}
+                      setTailorOpen={setTailorOpen}
+                      onMarkApplied={() => markApplied(selectedJob.job_id)}
+                      onUnmarkApplied={() => unmarkApplied(selectedJob.job_id)}
+                      onToggleSaved={() => toggleSaved(selectedJob.job_id)}
+                      saved={isSaved(selectedJob.job_id)}
+                    />
+                  ) : (
+                    <p className="text-sm text-muted-foreground">
+                      <Trans>Select a job from the list.</Trans>
+                    </p>
+                  )}
+                </div>
+              </ScrollArea>
+            </div>
+          )}
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
@@ -500,9 +523,11 @@ type JobRowProps = {
   saved: boolean;
   onToggleSaved: (e: React.MouseEvent) => void;
   score: number | null;
+  /** When false, hides star / pipeline controls (e.g. schema preview row). */
+  showPipelineActions?: boolean;
 };
 
-function JobRow({ job, selected, onSelect, saved, onToggleSaved, score }: JobRowProps) {
+function JobRow({ job, selected, onSelect, saved, onToggleSaved, score, showPipelineActions = true }: JobRowProps) {
   const location = [job.job_city, job.job_country].filter(Boolean).join(", ");
   const subtitle = [job.employer_name, location].filter(Boolean).join(" · ");
 
@@ -523,18 +548,22 @@ function JobRow({ job, selected, onSelect, saved, onToggleSaved, score }: JobRow
           ? "border-primary/50 bg-primary/10 shadow-xs dark:border-primary/40 dark:bg-primary/15"
           : "border-border bg-background hover:bg-muted/50",
       )}
-    >
-      <button
-        type="button"
-        onClick={(e) => {
-          e.stopPropagation();
-          onToggleSaved(e);
-        }}
-        className="mt-0.5 shrink-0 rounded-md p-0.5 text-muted-foreground hover:bg-muted hover:text-amber-600"
-        aria-label={saved ? t`Remove from discovered` : t`Save to discovered`}
       >
-        <StarIcon className="size-4" weight={saved ? "fill" : "regular"} aria-hidden />
-      </button>
+      {showPipelineActions ? (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleSaved(e);
+          }}
+          className="mt-0.5 shrink-0 rounded-md p-0.5 text-muted-foreground hover:bg-muted hover:text-amber-600"
+          aria-label={saved ? t`Remove from discovered` : t`Save to discovered`}
+        >
+          <StarIcon className="size-4" weight={saved ? "fill" : "regular"} aria-hidden />
+        </button>
+      ) : (
+        <div className="mt-0.5 w-5 shrink-0" aria-hidden />
+      )}
       <div className="min-w-0 flex-1">
         <p className="line-clamp-2 font-medium leading-snug">{job.job_title}</p>
         <p className="mt-0.5 line-clamp-1 text-xs text-muted-foreground">{subtitle}</p>
@@ -548,6 +577,8 @@ function JobRow({ job, selected, onSelect, saved, onToggleSaved, score }: JobRow
 
 type PanelProps = {
   job: JobResult;
+  /** Sample listing before API is configured — disable pipeline / tailor actions. */
+  isPreview?: boolean;
   matchScore: number | null;
   progressValue: number;
   listingLinkCount: number;
@@ -562,6 +593,7 @@ type PanelProps = {
 
 function SelectedJobPanel({
   job,
+  isPreview = false,
   matchScore,
   progressValue,
   listingLinkCount,
@@ -590,6 +622,21 @@ function SelectedJobPanel({
 
   return (
     <>
+      {isPreview ? (
+        <Alert className="border-dashed">
+          <MagnifyingGlassIcon />
+          <AlertTitle>
+            <Trans>Sample listing</Trans>
+          </AlertTitle>
+          <AlertDescription>
+            <Trans>
+              This card shows how the workspace looks. Configure Job Search in settings to load live listings and use
+              Ghostwriter on real jobs.
+            </Trans>
+          </AlertDescription>
+        </Alert>
+      ) : null}
+
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex min-w-0 gap-3">
           {job.employer_logo ? (
@@ -661,7 +708,14 @@ function SelectedJobPanel({
       </div>
 
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-        <Button variant="outline" size="sm" type="button" className="h-auto justify-start gap-2 py-2.5" onClick={() => setTailorOpen(true)}>
+        <Button
+          variant="outline"
+          size="sm"
+          type="button"
+          className="h-auto justify-start gap-2 py-2.5"
+          disabled={isPreview}
+          onClick={() => setTailorOpen(true)}
+        >
           <PenNibIcon className="size-4 shrink-0" aria-hidden />
           <Trans>Ghostwriter</Trans>
         </Button>
@@ -688,11 +742,24 @@ function SelectedJobPanel({
           </Button>
         )}
         {applied ? (
-          <Button size="sm" type="button" variant="outline" className="h-auto justify-start gap-2 py-2.5" onClick={onUnmarkApplied}>
+          <Button
+            size="sm"
+            type="button"
+            variant="outline"
+            className="h-auto justify-start gap-2 py-2.5"
+            disabled={isPreview}
+            onClick={onUnmarkApplied}
+          >
             <Trans>Mark not applied</Trans>
           </Button>
         ) : (
-          <Button size="sm" type="button" className="h-auto justify-start gap-2 py-2.5" onClick={onMarkApplied}>
+          <Button
+            size="sm"
+            type="button"
+            className="h-auto justify-start gap-2 py-2.5"
+            disabled={isPreview}
+            onClick={onMarkApplied}
+          >
             <CheckIcon className="size-4 shrink-0" weight="bold" aria-hidden />
             <Trans>Mark applied</Trans>
           </Button>
@@ -737,7 +804,14 @@ function SelectedJobPanel({
           <p className="text-sm italic text-muted-foreground">
             <Trans>After tailoring, your summary and highlights live in the duplicated resume in the builder.</Trans>
           </p>
-          <Button size="sm" variant="secondary" className="mt-3" type="button" onClick={() => setTailorOpen(true)}>
+          <Button
+            size="sm"
+            variant="secondary"
+            className="mt-3"
+            type="button"
+            disabled={isPreview}
+            onClick={() => setTailorOpen(true)}
+          >
             <Trans>Tailor a resume</Trans>
           </Button>
         </div>
@@ -785,7 +859,7 @@ function SelectedJobPanel({
           }
         />
         <DropdownMenuContent align="start" className="w-56">
-          <DropdownMenuItem onClick={onToggleSaved}>
+          <DropdownMenuItem disabled={isPreview} onClick={onToggleSaved}>
             {saved ? <Trans>Remove from discovered</Trans> : <Trans>Save to discovered</Trans>}
           </DropdownMenuItem>
           <Link to="/dashboard/job-search">
@@ -796,7 +870,7 @@ function SelectedJobPanel({
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <TailorDialog job={job} open={tailorOpen} onOpenChange={setTailorOpen} />
+      {!isPreview ? <TailorDialog job={job} open={tailorOpen} onOpenChange={setTailorOpen} /> : null}
     </>
   );
 }

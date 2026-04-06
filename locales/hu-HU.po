@@ -706,10 +706,13 @@ msgstr "Cég"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Teljesen ingyenes, örökké, rejtett költségek nélkül."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Álláskeresés konfigurálása"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "Forgatás"
 msgid "Russian"
 msgstr "orosz"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "A keresett parancs nem létezik."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "A tartalom túl magas ehhez az oldalhoz, ami nem kívánt eredményeket okozhat PDF-be való exportáláskor."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "A megadott jelszó helytelen"
@@ -2958,6 +2969,10 @@ msgstr "Ez a művelet nem vonható vissza."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "Ez a művelet nem vonható vissza. Minden adatod véglegesen törlődik."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "Cím"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "A fiókod törléséhez add meg a megerősítő szöveget, majd kattints az alábbi gombra."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Az álláshirdetések kereséséhez a RapidAPI-kulcsot a beállítások között kell beállítania."

@@ -706,10 +706,13 @@ msgstr "公司"
 msgid "Completely free, forever, no hidden costs."
 msgstr "完全免费，永久免费，没有任何隐藏费用。"
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "配置职位搜索"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "旋转"
 msgid "Russian"
 msgstr "俄语"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "你要查找的命令不存在。"
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "内容过高，超出了本页面，在导出为 PDF 时可能会导致不理想的效果。"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "你输入的密码不正确"
@@ -2958,6 +2969,10 @@ msgstr "此操作不可撤销。"
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "此操作不可撤销。你的所有数据都将被永久删除。"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "标题"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "要删除你的账号，你需要输入确认文本，然后点击下方按钮。"
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "要搜索职位列表，您需要在设置中配置 RapidAPI 密钥。"

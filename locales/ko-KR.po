@@ -706,10 +706,13 @@ msgstr "회사"
 msgid "Completely free, forever, no hidden costs."
 msgstr "완전히 무료이며, 영원히 숨은 비용이 없습니다."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "채용 정보 검색 구성"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "회전"
 msgid "Russian"
 msgstr "러시아어"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "찾으시는 명령이 없습니다."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "이 페이지의 콘텐츠가 너무 길어 PDF로 내보낼 때 예기치 않은 결과가 발생할 수 있습니다."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "입력하신 비밀번호가 올바르지 않습니다"
@@ -2958,6 +2969,10 @@ msgstr "이 작업은 되돌릴 수 없습니다."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "이 작업은 되돌릴 수 없습니다. 모든 데이터가 영구적으로 삭제됩니다."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "제목"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "계정을 삭제하려면 확인 문구를 입력한 뒤 아래 버튼을 클릭해야 합니다."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "채용공고를 검색하려면 설정에서 RapidAPI 키를 구성해야 합니다."

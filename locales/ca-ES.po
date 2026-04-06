@@ -706,10 +706,13 @@ msgstr "Empresa"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Completament gratuït, per sempre, sense costos ocults."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Configurar la cerca de feina"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "Rotació"
 msgid "Russian"
 msgstr "Rus"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "L’ordre que busques no existeix."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "El contingut és massa alt per a aquesta pàgina i això pot causar resultats indesitjats en exportar a PDF."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "La contrasenya introduïda és incorrecta"
@@ -2958,6 +2969,10 @@ msgstr "Aquesta acció no es pot desfer."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "Aquesta acció no es pot desfer. Totes les dades se suprimiran de manera permanent."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "Títol"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "Per suprimir el compte, has d’introduir el text de confirmació i fer clic al botó següent."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Per cercar ofertes de feina, has de configurar la teva clau de RapidAPI a la configuració."

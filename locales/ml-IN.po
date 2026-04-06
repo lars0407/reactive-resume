@@ -706,10 +706,13 @@ msgstr "കമ്പനി"
 msgid "Completely free, forever, no hidden costs."
 msgstr "പൂർണ്ണമായും സൗജന്യം, എന്നേക്കും, മറഞ്ഞ ചിലവുകളൊന്നുമില്ല."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "ജോലി തിരയൽ ക്രമീകരിക്കുക"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "ററോട്ടേഷൻ"
 msgid "Russian"
 msgstr "റഷ്യൻ"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "നിങ്ങൾ തിരയുന്ന കമാൻഡ് നില
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "ഈ പേജിനുള്ളിൽ ഉള്ളടക്കം വളരെ ഉയർന്നതാണ്, ഇത് PDFയിലേക്ക് എക്സ്പോർട്ട് ചെയ്യുമ്പോൾ അനാവശ്യഫലങ്ങൾ ഉണ്ടാകാൻ ഇടയാക്കാം."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "നിങ്ങൾ നൽകിയ പാസ്‌വേഡ് തെറ്റാണ്"
@@ -2958,6 +2969,10 @@ msgstr "ഈ പ്രവർത്തി തിരികെ ലഭ്യമാക
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "ഈ പ്രവർത്തി തിരികെ ലഭ്യമാക്കാൻ സാധിക്കില്ല. നിങ്ങളുടെ എല്ലാ ഡാറ്റയും ശാശ്വതമായി ഡിലീറ്റ് ചെയ്യപ്പെടും."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "ടൈറ്റിൽ"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "നിങ്ങളുടെ അക്കൗണ്ട് ഡിലീറ്റ് ചെയ്യാൻ, നിങ്ങൾ സ്ഥിരീകരണ ടെക്സ്റ്റ് നൽകുകയും താഴെയുള്ള ബട്ടൺ ക്ലിക്ക് ചെയ്യുകയും വേണം."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "ജോലി ലിസ്റ്റിംഗുകൾ തിരയുന്നതിന്, നിങ്ങൾ സെറ്റിംഗ്‌സിൽ നിങ്ങളുടെ RapidAPI കീ കോൺഫിഗർ ചെയ്യേണ്ടതുണ്ട്."

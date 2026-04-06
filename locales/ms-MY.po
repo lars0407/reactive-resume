@@ -706,10 +706,13 @@ msgstr "Syarikat"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Benar-benar percuma, selama-lamanya, tanpa kos tersembunyi."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Konfigurasikan Carian Pekerjaan"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "Putaran"
 msgid "Russian"
 msgstr "Rusia"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "Perintah yang anda cari tidak wujud."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "Kandungan terlalu tinggi untuk halaman ini, ini mungkin menyebabkan hasil yang tidak diingini apabila mengeksport ke PDF."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "Kata laluan yang anda masukkan adalah tidak betul"
@@ -2958,6 +2969,10 @@ msgstr "Tindakan ini tidak boleh dibatalkan."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "Tindakan ini tidak boleh dibatalkan. Semua data anda akan dipadamkan secara kekal."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "Tajuk"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "Untuk memadam akaun anda, anda perlu memasukkan teks pengesahan dan klik butang di bawah."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Untuk mencari senarai pekerjaan, anda perlu mengkonfigurasi kunci RapidAPI anda dalam tetapan."

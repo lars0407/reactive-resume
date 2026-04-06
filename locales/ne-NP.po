@@ -706,10 +706,13 @@ msgstr "कम्पनी"
 msgid "Completely free, forever, no hidden costs."
 msgstr "पूरी रूपमा निःशुल्क, सधैंका लागि, कुनै लुका लागत छैन।"
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "जागिर खोज कन्फिगर गर्नुहोस्"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "घुमाउने कोण (Rotation)"
 msgid "Russian"
 msgstr "रुसियन"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "तपाईं खोजिरहनुभएको कमान्ड 
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "यस पृष्ठका लागि सामग्री धेरै अग्लो छ, यसले PDF मा निर्यात गर्दा इच्छित परिणाम नआउन सक्छ।"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "तपाईंले प्रविष्ट गर्नुभएको पासवर्ड सही छैन"
@@ -2958,6 +2969,10 @@ msgstr "यो कार्य उल्ट्याउन सकिँदैन
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "यो कार्य उल्ट्याउन सकिँदैन। तपाईंका सबै डाटा स्थायी रूपमा मेटिनेछन्।"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "शीर्षक"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "तपाईंको खाता मेटाउन, तपाईंले यकिन पाठ (confirmation text) प्रविष्ट गरेर तलको बटन थिच्नुपर्छ।"
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "नोकरी सूचिहरू खोज्नका लागि, तपाईंले सेटिङ्समा आफ्नो RapidAPI की कन्फिगर गर्नुपर्नेछ।"

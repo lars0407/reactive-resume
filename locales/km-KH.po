@@ -706,9 +706,12 @@ msgstr "ក្រុមហ៊ុន"
 msgid "Completely free, forever, no hidden costs."
 msgstr "ឥតគិតថ្លៃ​ពេញលេញ ជារៀងរហូត គ្មាន​ចំនាយ​លាក់​កំបាំង។"
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
 msgstr ""
 
 #: src/dialogs/api-key/create.tsx
@@ -2475,6 +2478,10 @@ msgstr "មុំ​បង្វែរ"
 msgid "Russian"
 msgstr "Russian"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "ពាក្យ​បញ្ជា ដែល​អ្នក​កំព�
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "ខ្លឹមសារនៅលើទំព័រនេះវែងពេក ហើយអាចបណ្តាលឲ្យមានលទ្ធផលមិនល្អនៅពេលនាំចេញទៅជា PDF។"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "ពាក្យសម្ងាត់​ដែល​អ្នក​បាន​បញ្ចូល មិន​ត្រឹមត្រូវ​ទេ"
@@ -2958,6 +2969,10 @@ msgstr "សកម្មភាព​នេះ​មិន​អាច​មិន
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "សកម្មភាព​នេះ​មិន​អាច​មិនធ្វើវិញ​បានទេ។ ទិន្នន័យ​ទាំងអស់​របស់​អ្នក​នឹង​ត្រូវ​បាន​លុប​ជា​អចិន្ត្រៃយ៍។"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "ចំណងជើង"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "ដើម្បី​លុប​គណនី​របស់​អ្នក អ្នក​ត្រូវ​បញ្ចូល​អក្សរ​បញ្ជាក់ ហើយ​ចុច​ប៊ូតុង​ខាងក្រោម។"
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr ""

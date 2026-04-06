@@ -706,10 +706,13 @@ msgstr "شرکت"
 msgid "Completely free, forever, no hidden costs."
 msgstr "کاملاً رایگان، برای همیشه، بدون هزینهٔ پنهان."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "راه‌اندازی جستجوی شغل"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "چرخش"
 msgid "Russian"
 msgstr "روسی"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "دستور مورد نظر شما وجود ندارد."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "ارتفاع مطالب برای این صفحه بسیار بلند است، این ممکن است هنگام گرفتن خروجی PDF مشکل ایجاد نماید."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "گذرواژه‌ای که وارد کرده‌اید نادرست است"
@@ -2958,6 +2969,10 @@ msgstr "این عمل قابل بازگشت نیست."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "این عمل قابل بازگشت نیست. تمام داده‌های شما برای همیشه حذف خواهند شد."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "عنوان"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "برای حذف حساب خود، باید متن تأیید را وارد کرده و دکمهٔ زیر را کلیک کنید."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "برای جستجوی آگهی‌های شغلی، باید کلید RapidAPI خود را در تنظیمات پیکربندی کنید."

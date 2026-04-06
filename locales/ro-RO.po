@@ -706,10 +706,13 @@ msgstr "Companie"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Complet gratuit, pentru totdeauna, fără costuri ascunse."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Configurați căutarea unui loc de muncă"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "Rotire"
 msgid "Russian"
 msgstr "Rusă"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "Comanda pe care o căutați nu există."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "Conținutul este prea înalt pentru această pagină, ceea ce poate cauza rezultate nedorite la exportul în PDF."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "Parola introdusă este incorectă"
@@ -2958,6 +2969,10 @@ msgstr "Această acțiune nu poate fi anulată."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "Această acțiune nu poate fi anulată. Toate datele dvs. vor fi șterse definitiv."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "Titlu"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "Pentru a vă șterge contul, trebuie să introduceți textul de confirmare și să faceți clic pe butonul de mai jos."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Pentru a căuta anunțuri de locuri de muncă, trebuie să vă configurați cheia RapidAPI în setări."

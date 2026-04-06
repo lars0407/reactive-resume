@@ -706,10 +706,13 @@ msgstr "Společnost"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Zcela zdarma, navždy, bez skrytých poplatků."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Konfigurace vyhledávání práce"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Configure Job Search to load live listings"
+msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 #: src/hooks/use-prompt.tsx
@@ -2475,6 +2478,10 @@ msgstr "Otočení"
 msgid "Russian"
 msgstr "Ruština"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Sample listing"
+msgstr ""
+
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Save {0} Skills"
@@ -2917,6 +2924,10 @@ msgstr "Příkaz, který hledáte, neexistuje."
 msgid "The content is too tall for this page, this may cause undesirable results when exporting to PDF."
 msgstr "Obsah je příliš vysoký pro tuto stránku, což může při exportu do PDF způsobit nežádoucí výsledky."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "The layout below uses sample data. Add your RapidAPI JSearch key in settings, test the connection, then search for real jobs."
+msgstr ""
+
 #: src/routes/auth/resume-password.tsx
 msgid "The password you entered is incorrect"
 msgstr "Zadané heslo je nesprávné"
@@ -2958,6 +2969,10 @@ msgstr "Tuto akci nelze vrátit zpět."
 #: src/routes/dashboard/settings/danger-zone.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "Tuto akci nelze vrátit zpět. Všechna vaše data budou trvale smazána."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "This card shows how the workspace looks. Configure Job Search in settings to load live listings and use Ghostwriter on real jobs."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -3024,7 +3039,6 @@ msgstr "Název"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "Pro smazání účtu musíte zadat potvrzovací text a kliknout na tlačítko níže."
 
-#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Chcete-li vyhledávat nabídky práce, musíte v nastavení nakonfigurovat klíč RapidAPI."
