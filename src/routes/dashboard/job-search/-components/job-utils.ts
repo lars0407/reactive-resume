@@ -1,6 +1,6 @@
 import { t } from "@lingui/core/macro";
 
-import type { RapidApiQuota } from "@/schema/jobs";
+import type { JobResult, RapidApiQuota } from "@/schema/jobs";
 
 export function formatSalary(
   min: number | null,
@@ -60,4 +60,15 @@ export function isValidExternalUrl(url: string | null | undefined): boolean {
   } catch {
     return false;
   }
+}
+
+/** Count distinct listing / apply URLs attached to a job (for UI summaries). */
+export function countJobListingLinks(job: JobResult): number {
+  const urls = new Set<string>();
+  if (isValidExternalUrl(job.job_apply_link)) urls.add(job.job_apply_link.trim());
+  if (isValidExternalUrl(job.job_google_link)) urls.add(job.job_google_link!.trim());
+  for (const option of job.apply_options) {
+    if (isValidExternalUrl(option.apply_link)) urls.add(option.apply_link.trim());
+  }
+  return urls.size;
 }

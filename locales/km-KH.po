@@ -49,6 +49,7 @@ msgstr "{0, plural, one {# តួនាទី} other {# តួនាទី}}"
 
 #. placeholder {0}: quota.used
 #. placeholder {1}: quota.limit
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "{0} / {1} requests used"
 msgstr ""
@@ -56,6 +57,11 @@ msgstr ""
 #. placeholder {0}: Math.floor(diffDays / 30)
 #: src/routes/dashboard/job-search/-components/job-utils.ts
 msgid "{0} months ago"
+msgstr ""
+
+#. placeholder {0}: bulkSelected.size
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{0} selected"
 msgstr ""
 
 #. placeholder {0}: Math.floor(diffDays / 7)
@@ -72,12 +78,12 @@ msgstr "{column, plural, other {# ជួរឈរ}}"
 msgid "{diffDays} days ago"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "{PROJECTS_COUNT, plural, one {# project selected} other {# projects selected}}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{listingLinkCount, plural, one {# listing link} other {# listing links}}"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "{SEARCH_LINKS_COUNT, plural, one {# search link} other {# search links}}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{projectsCount, plural, one {# project linked} other {# projects linked}}"
 msgstr ""
 
 #: src/routes/dashboard/settings/job-search.tsx
@@ -96,14 +102,6 @@ msgstr "<0>សំណួរ</0><1>ដែលសួរ</1><2>ញឹកញាប់<
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "<0>Thank you for using Reactive Resume! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If Reactive Resume has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
 msgstr "<0>សូម​អរគុណ​ចំពោះ​ការ​ប្រើ Reactive Resume! កម្មវិធី​នេះ​ជា​ការងារចិត្តស្រឡាញ់មួយ ដែល​បានបង្កើត​ជា​ភាគច្រើន​ក្នុង​ពេល​ទំនេរ​របស់ខ្ញុំ ដោយមានការគាំទ្រដ៏អស្ចារ្យពីអ្នករួមចំណែកបើកប្រភពทั่วពិភពលោក។</0><1>បើ Reactive Resume បានជួយឱ្យអ្នក ហើយអ្នកចង់ជួយរក្សាឱ្យវាឥតគិតថ្លៃ និងបើកចំហសម្រាប់មនុស្សគ្រប់គ្នា សូមពិចារណាចូលរួមបរិច្ចាគ។ ការបរិច្ចាគតិចតួចទាំងអស់សុទ្ធតែមានតំលៃ!</1>"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "<0>Welcome back.</0> Jobs are like buses—miss one, and another comes. Let’s not miss this one."
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "0 selected"
-msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 msgid "1 month"
@@ -269,10 +267,6 @@ msgstr "បន្ថែម​ជួរដេក​នៅ​មុខ"
 msgid "Added {0} new skills to your original resume"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Additional queues use the same layout in the product — this page only demonstrates the Ready view."
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Advanced Filters"
 msgstr ""
@@ -280,6 +274,10 @@ msgstr ""
 #: src/utils/locale.ts
 msgid "Afrikaans"
 msgstr "Afrikaans"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "After tailoring, your summary and highlights live in the duplicated resume in the builder."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -290,14 +288,13 @@ msgstr "AI"
 msgid "AI features"
 msgstr ""
 
+#: src/components/command-palette/pages/navigation.tsx
+#: src/components/command-palette/pages/navigation.tsx
 #: src/routes/_home/-sections/header.tsx
-#: src/routes/_home/ai-job-search.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "AI Job Search"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "AI Job Search — Reactive Resume"
 msgstr ""
 
 #: src/routes/_home/-sections/ai-features.tsx
@@ -312,7 +309,7 @@ msgstr ""
 msgid "Albanian"
 msgstr "Albanian"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "All Jobs"
 msgstr ""
 
@@ -397,7 +394,8 @@ msgstr "កម្មវិធី"
 msgid "Application Statistics"
 msgstr "ស្ថិតិ​កម្មវិធី"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Applied"
 msgstr ""
 
@@ -405,11 +403,11 @@ msgstr ""
 msgid "Apply"
 msgstr ""
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Apply Link"
 msgstr ""
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Apply Via"
 msgstr ""
 
@@ -485,10 +483,6 @@ msgstr "រង្វាន់"
 msgid "Azerbaijani"
 msgstr "Azerbaijani"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Back to home"
-msgstr ""
-
 #: src/routes/auth/verify-2fa.tsx
 msgid "Back to Login"
 msgstr "ត្រឡប់​ទៅ​ការចូល"
@@ -513,7 +507,7 @@ msgstr "មូលដ្ឋាន"
 msgid "Beautiful templates to choose from, with more on the way."
 msgstr "គំរូ​ស្អាតៗ​ឲ្យ​ជ្រើសរើស ហើយ​នៅមាន​បន្ថែម​ទៀត​កំពុងមកដល់។"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Benefits"
 msgstr ""
 
@@ -608,6 +602,10 @@ msgstr "តើ​ខ្ញុំ​អាច​នាំចេញ​ប្រវ
 msgid "Cancel"
 msgstr "បោះបង់"
 
+#: src/components/command-palette/pages/navigation.tsx
+msgid "Careers"
+msgstr ""
+
 #: src/utils/locale.ts
 msgid "Catalan"
 msgstr "Catalan"
@@ -669,6 +667,11 @@ msgstr "Chinese (Traditional)"
 msgid "Circle"
 msgstr "រង្វង់"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Classic job search"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Clear all"
 msgstr ""
@@ -703,6 +706,7 @@ msgstr "ក្រុមហ៊ុន"
 msgid "Completely free, forever, no hidden costs."
 msgstr "ឥតគិតថ្លៃ​ពេញលេញ ជារៀងរហូត គ្មាន​ចំនាយ​លាក់​កំបាំង។"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr ""
@@ -771,6 +775,7 @@ msgstr "ចម្លង​កូនសោ​សម្ងាត់​នេះ �
 msgid "Copy URL"
 msgstr "ចម្លង URL"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Could not fetch jobs"
 msgstr ""
@@ -925,10 +930,6 @@ msgstr "តំបន់​គ្រោះថ្នាក់"
 msgid "Danish"
 msgstr "Danish"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "daogames GmbH"
-msgstr ""
-
 #: src/components/user/dropdown-menu.tsx
 #: src/utils/theme.ts
 msgid "Dark"
@@ -1008,7 +1009,7 @@ msgstr "កំពុង​លុប​ប្រវត្តិរូប​រប
 #: src/dialogs/resume/sections/publication.tsx
 #: src/dialogs/resume/sections/reference.tsx
 #: src/dialogs/resume/sections/volunteer.tsx
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Description"
 msgstr "សេចក្ដី​ពិពណ៌នា"
 
@@ -1016,7 +1017,7 @@ msgstr "សេចក្ដី​ពិពណ៌នា"
 msgid "Design"
 msgstr "រចនា"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Direct"
 msgstr ""
 
@@ -1053,7 +1054,7 @@ msgstr "ផ្ដាច់"
 msgid "Discord"
 msgstr "Discord"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Discovered"
 msgstr ""
 
@@ -1095,7 +1096,6 @@ msgstr ""
 msgid "Download JSON"
 msgstr "ទាញយក JSON"
 
-#: src/routes/_home/ai-job-search.tsx
 #: src/routes/builder/$resumeId/-components/dock.tsx
 msgid "Download PDF"
 msgstr "ទាញយក PDF"
@@ -1145,6 +1145,7 @@ msgstr ""
 msgid "e.g. 50000"
 msgstr ""
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "e.g. frontend developer jobs in Berlin"
 msgstr ""
@@ -1246,14 +1247,6 @@ msgstr "អ្វី​ដែល​បាន​បញ្ចូល​នៅ​ទ
 msgid "Everything you need to create, customize, and share professional resumes. Built with privacy in mind, powered by open source, and completely free forever."
 msgstr "អ្វីៗ​ដែល​អ្នក​ត្រូវការ ដើម្បី​បង្កើត ប្ដូរ​តាមបំណង និង​ចែករំលែក​ប្រវត្តិរូប​វិជ្ជាជីវៈ។ ត្រូវ​បាន​បង្កើត​ឡើង​ដោយ​គិត​ពី​ភាព​ឯកជន ប្រើ​បច្ចេកវិទ្យា​បើក​ប្រភព ហើយ​ឥត​គិតថ្លៃ​ទាំងស្រុង ជារៀងរហូត។"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Example Corp"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Example saved searches and listing URLs will appear here in the app."
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/use-job-search.ts
 msgid "Exclude {value}"
 msgstr ""
@@ -1276,6 +1269,10 @@ msgstr "ចេញពីអេក្រង់ពេញ"
 msgid "Experience"
 msgstr "បទពិសោធន៍"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Experience appears preferred rather than mandatory."
+msgstr ""
+
 #: src/dialogs/api-key/create.tsx
 msgid "Expires in"
 msgstr "ផុតកំណត់ក្នុង"
@@ -1292,10 +1289,6 @@ msgstr "ស្វែង​រក​គំរូ​ជ្រើសរើស​ច
 #: src/routes/dashboard/settings/api-keys.tsx
 msgid "Explore the API documentation to learn how to integrate Reactive Resume with your applications. Find detailed endpoints, request examples, and authentication methods."
 msgstr "ស្វែងរក​ឯកសារ​អំពី API ដើម្បី​ស្វែងយល់​ពី​របៀប​ផ្សាភ្ជាប់ Reactive Resume ជាមួយ​កម្មវិធី​របស់​អ្នក។ អ្នក​អាច​រកឃើញ​ចំណុច​ចូល​ច្រើន ប្រភេទ​សំណើរ​ឧទាហរណ៍ និង​វិធីសាស្ត្រ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​ផ្សេងៗ។"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Explore the workflow: scan roles, read an AI fit assessment, refine your summary, and move a job to applied when you are ready — built for both light and dark themes."
-msgstr ""
 
 #: src/utils/resume/section.tsx
 msgid "Export"
@@ -1326,17 +1319,9 @@ msgstr "មុខងារ"
 msgid "Filter by"
 msgstr "ត្រង​តាម"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Filters"
-msgstr ""
-
 #: src/utils/locale.ts
 msgid "Finnish"
 msgstr "Finnish"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Fit assessment"
-msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Flexibility"
@@ -1363,6 +1348,10 @@ msgstr "ទម្ងន់​ពុម្ពអក្សរ"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "Font Weights"
 msgstr "ទម្ងន់​ពុម្ពអក្សរ"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "For a resume-aware narrative, run Ghostwriter (tailor) with a CV you manage in Reactive Resume."
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "For a secure and distraction-free experience."
@@ -1401,6 +1390,10 @@ msgstr "ទ្រង់ទ្រាយសេរី"
 msgid "French"
 msgstr "French"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Full listing"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/layout/pages.tsx
 msgid "Full Width"
 msgstr "ទទឹង​ពេញ"
@@ -1421,10 +1414,6 @@ msgstr "បង្កើត​ឈ្មោះចៃដន្យ"
 msgid "German"
 msgstr "ភាសាអាល្លឺម៉ង់"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Germany | Remote"
-msgstr ""
-
 #: src/routes/_home/-sections/hero.tsx
 msgid "Get Started"
 msgstr "ចាប់ផ្តើម"
@@ -1433,7 +1422,7 @@ msgstr "ចាប់ផ្តើម"
 msgid "Get your API key from RapidAPI by subscribing to the JSearch API."
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Ghostwriter"
 msgstr ""
 
@@ -1446,6 +1435,7 @@ msgstr "ត្រឡប់​ក្រោយ"
 msgid "Go to dashboard"
 msgstr "ទៅ​កាន់​ផ្ទាំង​គ្រប់គ្រង"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Go to Settings"
 msgstr ""
@@ -1453,6 +1443,10 @@ msgstr ""
 #: src/components/command-palette/pages/navigation.tsx
 msgid "Go to..."
 msgstr "ទៅកាន់..."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Google Jobs listing"
+msgstr ""
 
 #: src/dialogs/resume/sections/education.tsx
 msgid "Grade"
@@ -1568,10 +1562,6 @@ msgstr "តើ​ទិន្នន័យ​របស់​ខ្ញុំ​ត
 msgid "Hungarian"
 msgstr "Hungarian"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Hybrid · Berlin"
-msgstr ""
-
 #: src/components/level/combobox.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Icon"
@@ -1620,10 +1610,6 @@ msgstr "បញ្ចូល​តារាង"
 msgid "Interests"
 msgstr "ចំណាប់អារម្មណ៍"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Interface preview"
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Intern"
 msgstr ""
@@ -1652,10 +1638,6 @@ msgstr "អក្សរ​ទ្រេត"
 msgid "Japanese"
 msgstr "Japanese"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Job listings use your configured provider. AI features use your own model credentials when enabled in settings."
-msgstr ""
-
 #: src/routes/dashboard/-components/sidebar.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Job Search"
@@ -1668,6 +1650,15 @@ msgstr ""
 
 #: src/routes/_home/-sections/ai-features.tsx
 msgid "Job-specific tailoring"
+msgstr ""
+
+#: src/components/command-palette/pages/navigation.tsx
+msgid "Jobs"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Jobs are like buses—miss one, and another comes. Let's line up the next right role here."
 msgstr ""
 
 #: src/routes/dashboard/settings/job-search.tsx
@@ -1799,8 +1790,8 @@ msgstr "ស្បែកភ្លឺ"
 msgid "Line Height"
 msgstr "កម្ពស់​បន្ទាត់"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Link resumes or projects to track how you pitch each role."
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Linking projects to applications is not available yet—use resumes to track tailored versions."
 msgstr ""
 
 #: src/routes/dashboard/settings/authentication/-components/hooks.tsx
@@ -1810,6 +1801,11 @@ msgstr "កំពុង​តភ្ជាប់​គណនី {providerName} �
 #: src/routes/dashboard/resumes/index.tsx
 msgid "List"
 msgstr "បញ្ជី"
+
+#. placeholder {0}: exp.required_experience_in_months
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Listed experience window: about {0} months."
+msgstr ""
 
 #: src/utils/locale.ts
 msgid "Lithuanian"
@@ -1876,12 +1872,12 @@ msgstr "រឹម (ផ្ដេក)"
 msgid "Margin (Vertical)"
 msgstr "រឹម (បញ្ឈរ)"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Mark applied"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Match score {DEMO_SCORE}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Mark not applied"
 msgstr ""
 
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
@@ -1896,16 +1892,12 @@ msgstr ""
 msgid "Model"
 msgstr "ម៉ូដែល"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "More actions"
 msgstr ""
 
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "More than 3 years"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Motivated aspiring web developer eager to contribute to daogames GmbH's products through hands-on internship experience, collaborative development, and continuous learning in a remote-first team."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -1961,6 +1953,7 @@ msgstr "ផ្នែក​ថ្មី"
 msgid "New Skills Detected"
 msgstr ""
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Next"
 msgstr ""
@@ -1977,8 +1970,21 @@ msgstr ""
 msgid "No experience"
 msgstr ""
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No external links were returned for this job."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "No jobs found. Try a different search query."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No jobs in this view for your current results. Try another tab or run a new search."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No listing quality score from provider"
 msgstr ""
 
 #: src/components/ui/combobox.tsx
@@ -1987,6 +1993,14 @@ msgstr "រក​មិន​ឃើញ​លទ្ធផល។"
 
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "No resumes found. Create a resume first."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No strict experience minimum is advertised."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No structured experience hints were provided for this listing."
 msgstr ""
 
 #: src/utils/locale.ts
@@ -2014,16 +2028,17 @@ msgstr "ការថែទាំ​បន្ត"
 msgid "Open"
 msgstr "បើក"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Open classic layout"
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Open Email Client"
 msgstr "បើក​កម្មវិធី​អ៊ីមែល"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Open job listing"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Open Job Search"
 msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
@@ -2073,6 +2088,7 @@ msgstr "ទំព័រ"
 msgid "Page {0}"
 msgstr "ទំព័រ {0}"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Page {currentPage}"
 msgstr ""
@@ -2194,8 +2210,13 @@ msgstr "ចំណង់ចំណូលចិត្ត"
 msgid "Press <0>{RETURN_KEY}</0> or <1>{COMMA_KEY}</1> to add or save the current keyword."
 msgstr "ចុច <0>{RETURN_KEY}</0> ឬ <1>{COMMA_KEY}</1> ដើម្បីបន្ថែម ឬរក្សាទុកពាក្យគន្លឹះបច្ចុប្បន្ន។"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Previous"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Primary apply URL"
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
@@ -2248,7 +2269,17 @@ msgstr "អត្ថបទផ្សព្វផ្សាយ"
 msgid "Publisher"
 msgstr "អ្នកបោះពុម្ពផ្សាយ"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Publisher apply link"
+msgstr ""
+
+#. placeholder {0}: job.job_publisher || t`Unknown`
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Publisher: {0}"
+msgstr ""
+
 #. placeholder {0}: quota.remaining
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Quota: {0} remaining"
 msgstr ""
@@ -2281,8 +2312,8 @@ msgstr "Reactive Resume កំពុង​ចាប់ផ្តើម​លើ P
 msgid "Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
 msgstr "Reactive Resume គឺ​បើក​ប្រភព ផ្តោតលើ​ភាព​ឯកជន និង​ឥតគិតថ្លៃ​ទាំងស្រុង។ ខុស​ពី​កម្មវិធី​បង្កើត​ប្រវត្តិរូប​ផ្សេងៗ វា​មិន​បង្ហាញ​ពាណិជ្ជកម្ម មិន​តាមដាន​ទិន្នន័យ​របស់​អ្នក ហើយ​មិន​កំណត់​មុខងារ​ពីក្រោយ paywall ឡើយ។"
 
-#: src/routes/_home/ai-job-search.tsx
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Ready"
 msgstr ""
 
@@ -2316,7 +2347,8 @@ msgstr "ផ្ទៀងផ្ទាត់​ម្ដងទៀត"
 msgid "Remember your password? <0/>"
 msgstr "ចាំពាក្យសម្ងាត់របស់អ្នក? <0/>"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/-components/job-card.tsx
 #: src/routes/dashboard/job-search/-components/job-detail.tsx
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
@@ -2330,6 +2362,11 @@ msgstr ""
 #: src/dialogs/resume/sections/experience.tsx
 msgid "Remove"
 msgstr "លុបចេញ"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Remove from discovered"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Remove Password"
@@ -2355,7 +2392,7 @@ msgstr "រាយការណ៍​កំហុស"
 msgid "Report an issue"
 msgstr "រាយការណ៍បញ្ហា"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Required Skills"
 msgstr ""
 
@@ -2405,6 +2442,11 @@ msgstr ""
 msgid "Resumes"
 msgstr "ប្រវត្តិរូប"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Resumes & export"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Retry"
 msgstr ""
@@ -2412,6 +2454,10 @@ msgstr ""
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
 msgstr "តម្រង់​ស្ដាំ"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Role fit factors"
+msgstr ""
 
 #: src/dialogs/resume/sections/experience.tsx
 msgid "Role Progression"
@@ -2428,10 +2474,6 @@ msgstr "មុំ​បង្វែរ"
 #: src/utils/locale.ts
 msgid "Russian"
 msgstr "Russian"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sample AI job search layout. Interactive elements are for demonstration."
-msgstr ""
 
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
@@ -2458,6 +2500,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr "រក្សាទុក​ការ​ផ្លាស់ប្ដូរ"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Save to discovered"
+msgstr ""
+
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Scan the QR code below with your preferred authenticator app. You can also copy the secret below and paste it into your app."
 msgstr "ស្កេន​កូដ QR ខាងក្រោម​ដោយ​ប្រើ​កម្មវិធី​ផ្ទៀងផ្ទាត់​អត្តសញ្ញាណ​ដែល​អ្នក​ពេញចិត្ត។ អ្នក​ក៏​អាច​ចម្លង​កូនសោ​សម្ងាត់​ខាងក្រោម ហើយ​បិទភ្ជាប់​វា​ទៅ​ក្នុង​កម្មវិធី​របស់​អ្នក​ផង​ដែរ។"
@@ -2466,7 +2513,9 @@ msgstr "ស្កេន​កូដ QR ខាងក្រោម​ដោយ​�
 msgid "School"
 msgstr "សាលា"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Search"
@@ -2485,10 +2534,6 @@ msgstr "ស្វែងរក​រូបតំណាង"
 msgid "Search for..."
 msgstr "ស្វែងរក​ប្រវត្តិរូប..."
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Search listings, review fit, generate tailored summaries, and track applications — integrated into Reactive Resume."
-msgstr ""
-
 #: src/components/ui/combobox.tsx
 msgid "Search..."
 msgstr "ស្វែងរក..."
@@ -2501,6 +2546,10 @@ msgstr "កូនសោ​សម្ងាត់​ត្រូវ​បាន​
 msgid "Section Type"
 msgstr "ប្រភេទ​ផ្នែក"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Select a job from the list."
+msgstr ""
+
 #. placeholder {0}: job.job_title
 #. placeholder {1}: job.employer_name
 #. placeholder {2}: aiEnabled ? " and the AI will optimize it for this position." : "."
@@ -2508,7 +2557,7 @@ msgstr "ប្រភេទ​ផ្នែក"
 msgid "Select a resume to tailor for \"{0}\" at {1}. A copy will be created{2}"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Select all filtered"
 msgstr ""
 
@@ -2531,10 +2580,6 @@ msgstr "ផ្ញើ​អ៊ីមែល​កំណត់​ពាក្យស
 #: src/routes/auth/forgot-password.tsx
 msgid "Sending password reset email..."
 msgstr "កំពុង​ផ្ញើ​អ៊ីមែល​កំណត់​ពាក្យសម្ងាត់​ឡើងវិញ..."
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Senior Frontend Engineer"
-msgstr ""
 
 #: src/components/input/rich-input.tsx
 msgid "Separator"
@@ -2606,10 +2651,6 @@ msgstr "ទទឹង​របារ​បាត"
 #: src/routes/auth/login.tsx
 msgid "Sign in"
 msgstr "ចូល"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sign in to try it"
-msgstr ""
 
 #: src/routes/auth/login.tsx
 msgid "Sign in to your account"
@@ -2714,10 +2755,6 @@ msgstr "គម្លាត (បញ្ឈរ)"
 msgid "Spanish"
 msgstr "Spanish"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sponsor not found"
-msgstr ""
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Sponsors"
 msgstr "អ្នកឧបត្ថម្ភ"
@@ -2748,10 +2785,6 @@ msgstr "ចាប់ផ្តើម​បង្កើត​ប្រវត្ត
 #: src/routes/dashboard/resumes/-components/list-view.tsx
 msgid "Start building your resume from scratch"
 msgstr "ចាប់ផ្តើម​បង្កើត​ប្រវត្តិរូប​របស់​អ្នក​ពី​សូន្យ"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Startup jobs"
-msgstr ""
 
 #: src/utils/resume/section.tsx
 msgid "Statistics"
@@ -2806,12 +2839,16 @@ msgstr "ស្លាក"
 msgid "Tags can be used to categorize your resume by keywords."
 msgstr "ស្លាក​អាច​ត្រូវ​បាន​ប្រើ ដើម្បី​ចាត់ថ្នាក់​ប្រវត្តិរូប​របស់​អ្នក​តាម​ពាក្យ​គន្លឹះ។"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Tailor a resume"
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/job-detail.tsx
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Tailor Resume"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Tailored summary"
 msgstr ""
 
@@ -2887,10 +2924,6 @@ msgstr "ពាក្យសម្ងាត់​ដែល​អ្នក​បា
 #: src/routes/auth/resume-password.tsx
 msgid "The resume you are trying to access is password protected"
 msgstr "ប្រវត្តិរូប ដែល​អ្នក​កំពុង​ព្យាយាម​ចូល​ដំណើរការ ត្រូវ​បាន​ការពារ​ដោយ​ពាក្យសម្ងាត់"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "The role is entry-level and remote-friendly, which supports flexibility. Until your profile lists relevant web development skills and concrete experience, fit stays tentative—add internships, projects, or coursework so the assessment can strengthen."
-msgstr ""
 
 #: src/components/input/rich-input.tsx
 msgid "The URL you entered is not valid."
@@ -2991,6 +3024,7 @@ msgstr "ចំណងជើង"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "ដើម្បី​លុប​គណនី​របស់​អ្នក អ្នក​ត្រូវ​បញ្ចូល​អក្សរ​បញ្ជាក់ ហើយ​ចុច​ប៊ូតុង​ខាងក្រោម។"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr ""
@@ -3004,7 +3038,7 @@ msgstr ""
 msgid "Track your resume's views and downloads"
 msgstr "តាមដាន​ចំនួន​មើល និង​ចំនួន​ទាញយក​ប្រវត្តិរូប​របស់​អ្នក"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Tracker off"
 msgstr ""
 
@@ -3016,10 +3050,6 @@ msgstr "ការបកប្រែ"
 #: src/utils/locale.ts
 msgid "Turkish"
 msgstr "Turkish"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Turn job listings into tailored resumes"
-msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
@@ -3108,6 +3138,10 @@ msgstr "គូស​បន្ទាត់​ក្រោម"
 msgctxt "'Ctrl' may be replaced with the locale-specific equivalent (e.g. 'Strg' for QWERTZ layouts)."
 msgid "Undo (Ctrl+Z)"
 msgstr "មិនធ្វើវិញ (Ctrl+Z)"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Unknown"
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Unlimited Resumes"
@@ -3281,8 +3315,8 @@ msgstr "ការផ្ទៀងផ្ទាត់​អ៊ីមែល​ជា
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "View"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "View listing"
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
@@ -3293,10 +3327,6 @@ msgstr "ចំនួន​មើល"
 #: src/utils/resume/section.tsx
 msgid "Volunteer"
 msgstr "ស្ម័គ្រចិត្ត"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Web Developer Intern"
-msgstr ""
 
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -3310,6 +3340,14 @@ msgstr ""
 #: src/routes/builder/$resumeId/-sidebar/left/sections/basics.tsx
 msgid "Website"
 msgstr "គេហទំព័រ"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Welcome back, {displayName}."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Welcome back."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"

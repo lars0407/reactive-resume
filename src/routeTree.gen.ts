@@ -27,7 +27,6 @@ import { Route as AuthOauthRouteImport } from "./routes/auth/oauth";
 import { Route as AuthLoginRouteImport } from "./routes/auth/login";
 import { Route as AuthForgotPasswordRouteImport } from "./routes/auth/forgot-password";
 import { Route as ApiHealthRouteImport } from "./routes/api/health";
-import { Route as HomeAiJobSearchRouteImport } from "./routes/_home/ai-job-search";
 import { Route as DotwellKnownOpenidConfigurationRouteImport } from "./routes/[.]well-known/openid-configuration";
 import { Route as DotwellKnownOauthProtectedResourceRouteImport } from "./routes/[.]well-known/oauth-protected-resource";
 import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from "./routes/[.]well-known/oauth-authorization-server";
@@ -35,6 +34,7 @@ import { Route as UsernameSlugRouteImport } from "./routes/$username/$slug";
 import { Route as BuilderResumeIdRouteRouteImport } from "./routes/builder/$resumeId/route";
 import { Route as DashboardResumesIndexRouteImport } from "./routes/dashboard/resumes/index";
 import { Route as DashboardJobSearchIndexRouteImport } from "./routes/dashboard/job-search/index";
+import { Route as DashboardAiJobSearchIndexRouteImport } from "./routes/dashboard/ai-job-search/index";
 import { Route as BuilderResumeIdIndexRouteImport } from "./routes/builder/$resumeId/index";
 import { Route as UploadsUserIdSplatRouteImport } from "./routes/uploads/$userId.$";
 import { Route as DashboardSettingsProfileRouteImport } from "./routes/dashboard/settings/profile";
@@ -139,11 +139,6 @@ const ApiHealthRoute = ApiHealthRouteImport.update({
   path: "/api/health",
   getParentRoute: () => rootRouteImport,
 } as any);
-const HomeAiJobSearchRoute = HomeAiJobSearchRouteImport.update({
-  id: "/ai-job-search",
-  path: "/ai-job-search",
-  getParentRoute: () => HomeRouteRoute,
-} as any);
 const DotwellKnownOpenidConfigurationRoute =
   DotwellKnownOpenidConfigurationRouteImport.update({
     id: "/.well-known/openid-configuration",
@@ -182,6 +177,12 @@ const DashboardJobSearchIndexRoute = DashboardJobSearchIndexRouteImport.update({
   path: "/job-search/",
   getParentRoute: () => DashboardRouteRoute,
 } as any);
+const DashboardAiJobSearchIndexRoute =
+  DashboardAiJobSearchIndexRouteImport.update({
+    id: "/ai-job-search/",
+    path: "/ai-job-search/",
+    getParentRoute: () => DashboardRouteRoute,
+  } as any);
 const BuilderResumeIdIndexRoute = BuilderResumeIdIndexRouteImport.update({
   id: "/",
   path: "/",
@@ -271,7 +272,6 @@ export interface FileRoutesByFullPath {
   "/.well-known/oauth-authorization-server": typeof DotwellKnownOauthAuthorizationServerRouteWithChildren;
   "/.well-known/oauth-protected-resource": typeof DotwellKnownOauthProtectedResourceRouteWithChildren;
   "/.well-known/openid-configuration": typeof DotwellKnownOpenidConfigurationRoute;
-  "/ai-job-search": typeof HomeAiJobSearchRoute;
   "/api/health": typeof ApiHealthRoute;
   "/auth/forgot-password": typeof AuthForgotPasswordRoute;
   "/auth/login": typeof AuthLoginRoute;
@@ -298,6 +298,7 @@ export interface FileRoutesByFullPath {
   "/dashboard/settings/profile": typeof DashboardSettingsProfileRoute;
   "/uploads/$userId/$": typeof UploadsUserIdSplatRoute;
   "/builder/$resumeId/": typeof BuilderResumeIdIndexRoute;
+  "/dashboard/ai-job-search/": typeof DashboardAiJobSearchIndexRoute;
   "/dashboard/job-search/": typeof DashboardJobSearchIndexRoute;
   "/dashboard/resumes/": typeof DashboardResumesIndexRoute;
   "/dashboard/settings/authentication/": typeof DashboardSettingsAuthenticationIndexRoute;
@@ -308,7 +309,6 @@ export interface FileRoutesByTo {
   "/.well-known/oauth-authorization-server": typeof DotwellKnownOauthAuthorizationServerRouteWithChildren;
   "/.well-known/oauth-protected-resource": typeof DotwellKnownOauthProtectedResourceRouteWithChildren;
   "/.well-known/openid-configuration": typeof DotwellKnownOpenidConfigurationRoute;
-  "/ai-job-search": typeof HomeAiJobSearchRoute;
   "/api/health": typeof ApiHealthRoute;
   "/auth/forgot-password": typeof AuthForgotPasswordRoute;
   "/auth/login": typeof AuthLoginRoute;
@@ -336,6 +336,7 @@ export interface FileRoutesByTo {
   "/dashboard/settings/profile": typeof DashboardSettingsProfileRoute;
   "/uploads/$userId/$": typeof UploadsUserIdSplatRoute;
   "/builder/$resumeId": typeof BuilderResumeIdIndexRoute;
+  "/dashboard/ai-job-search": typeof DashboardAiJobSearchIndexRoute;
   "/dashboard/job-search": typeof DashboardJobSearchIndexRoute;
   "/dashboard/resumes": typeof DashboardResumesIndexRoute;
   "/dashboard/settings/authentication": typeof DashboardSettingsAuthenticationIndexRoute;
@@ -351,7 +352,6 @@ export interface FileRoutesById {
   "/.well-known/oauth-authorization-server": typeof DotwellKnownOauthAuthorizationServerRouteWithChildren;
   "/.well-known/oauth-protected-resource": typeof DotwellKnownOauthProtectedResourceRouteWithChildren;
   "/.well-known/openid-configuration": typeof DotwellKnownOpenidConfigurationRoute;
-  "/_home/ai-job-search": typeof HomeAiJobSearchRoute;
   "/api/health": typeof ApiHealthRoute;
   "/auth/forgot-password": typeof AuthForgotPasswordRoute;
   "/auth/login": typeof AuthLoginRoute;
@@ -379,6 +379,7 @@ export interface FileRoutesById {
   "/dashboard/settings/profile": typeof DashboardSettingsProfileRoute;
   "/uploads/$userId/$": typeof UploadsUserIdSplatRoute;
   "/builder/$resumeId/": typeof BuilderResumeIdIndexRoute;
+  "/dashboard/ai-job-search/": typeof DashboardAiJobSearchIndexRoute;
   "/dashboard/job-search/": typeof DashboardJobSearchIndexRoute;
   "/dashboard/resumes/": typeof DashboardResumesIndexRoute;
   "/dashboard/settings/authentication/": typeof DashboardSettingsAuthenticationIndexRoute;
@@ -395,7 +396,6 @@ export interface FileRouteTypes {
     | "/.well-known/oauth-authorization-server"
     | "/.well-known/oauth-protected-resource"
     | "/.well-known/openid-configuration"
-    | "/ai-job-search"
     | "/api/health"
     | "/auth/forgot-password"
     | "/auth/login"
@@ -422,6 +422,7 @@ export interface FileRouteTypes {
     | "/dashboard/settings/profile"
     | "/uploads/$userId/$"
     | "/builder/$resumeId/"
+    | "/dashboard/ai-job-search/"
     | "/dashboard/job-search/"
     | "/dashboard/resumes/"
     | "/dashboard/settings/authentication/";
@@ -432,7 +433,6 @@ export interface FileRouteTypes {
     | "/.well-known/oauth-authorization-server"
     | "/.well-known/oauth-protected-resource"
     | "/.well-known/openid-configuration"
-    | "/ai-job-search"
     | "/api/health"
     | "/auth/forgot-password"
     | "/auth/login"
@@ -460,6 +460,7 @@ export interface FileRouteTypes {
     | "/dashboard/settings/profile"
     | "/uploads/$userId/$"
     | "/builder/$resumeId"
+    | "/dashboard/ai-job-search"
     | "/dashboard/job-search"
     | "/dashboard/resumes"
     | "/dashboard/settings/authentication";
@@ -474,7 +475,6 @@ export interface FileRouteTypes {
     | "/.well-known/oauth-authorization-server"
     | "/.well-known/oauth-protected-resource"
     | "/.well-known/openid-configuration"
-    | "/_home/ai-job-search"
     | "/api/health"
     | "/auth/forgot-password"
     | "/auth/login"
@@ -502,6 +502,7 @@ export interface FileRouteTypes {
     | "/dashboard/settings/profile"
     | "/uploads/$userId/$"
     | "/builder/$resumeId/"
+    | "/dashboard/ai-job-search/"
     | "/dashboard/job-search/"
     | "/dashboard/resumes/"
     | "/dashboard/settings/authentication/";
@@ -654,13 +655,6 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof ApiHealthRouteImport;
       parentRoute: typeof rootRouteImport;
     };
-    "/_home/ai-job-search": {
-      id: "/_home/ai-job-search";
-      path: "/ai-job-search";
-      fullPath: "/ai-job-search";
-      preLoaderRoute: typeof HomeAiJobSearchRouteImport;
-      parentRoute: typeof HomeRouteRoute;
-    };
     "/.well-known/openid-configuration": {
       id: "/.well-known/openid-configuration";
       path: "/.well-known/openid-configuration";
@@ -708,6 +702,13 @@ declare module "@tanstack/react-router" {
       path: "/job-search";
       fullPath: "/dashboard/job-search/";
       preLoaderRoute: typeof DashboardJobSearchIndexRouteImport;
+      parentRoute: typeof DashboardRouteRoute;
+    };
+    "/dashboard/ai-job-search/": {
+      id: "/dashboard/ai-job-search/";
+      path: "/ai-job-search";
+      fullPath: "/dashboard/ai-job-search/";
+      preLoaderRoute: typeof DashboardAiJobSearchIndexRouteImport;
       parentRoute: typeof DashboardRouteRoute;
     };
     "/builder/$resumeId/": {
@@ -812,12 +813,10 @@ declare module "@tanstack/react-router" {
 }
 
 interface HomeRouteRouteChildren {
-  HomeAiJobSearchRoute: typeof HomeAiJobSearchRoute;
   HomeIndexRoute: typeof HomeIndexRoute;
 }
 
 const HomeRouteRouteChildren: HomeRouteRouteChildren = {
-  HomeAiJobSearchRoute: HomeAiJobSearchRoute,
   HomeIndexRoute: HomeIndexRoute,
 };
 
@@ -861,6 +860,7 @@ interface DashboardRouteRouteChildren {
   DashboardSettingsJobSearchRoute: typeof DashboardSettingsJobSearchRoute;
   DashboardSettingsPreferencesRoute: typeof DashboardSettingsPreferencesRoute;
   DashboardSettingsProfileRoute: typeof DashboardSettingsProfileRoute;
+  DashboardAiJobSearchIndexRoute: typeof DashboardAiJobSearchIndexRoute;
   DashboardJobSearchIndexRoute: typeof DashboardJobSearchIndexRoute;
   DashboardResumesIndexRoute: typeof DashboardResumesIndexRoute;
   DashboardSettingsAuthenticationIndexRoute: typeof DashboardSettingsAuthenticationIndexRoute;
@@ -874,6 +874,7 @@ const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardSettingsJobSearchRoute: DashboardSettingsJobSearchRoute,
   DashboardSettingsPreferencesRoute: DashboardSettingsPreferencesRoute,
   DashboardSettingsProfileRoute: DashboardSettingsProfileRoute,
+  DashboardAiJobSearchIndexRoute: DashboardAiJobSearchIndexRoute,
   DashboardJobSearchIndexRoute: DashboardJobSearchIndexRoute,
   DashboardResumesIndexRoute: DashboardResumesIndexRoute,
   DashboardSettingsAuthenticationIndexRoute:

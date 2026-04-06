@@ -49,6 +49,7 @@ msgstr "{0, plural, one {# vaidmuo} few {# vaidmenys} many {# vaidmenų} other {
 
 #. placeholder {0}: quota.used
 #. placeholder {1}: quota.limit
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "{0} / {1} requests used"
 msgstr "{0} / {1} naudojamos užklausos"
@@ -57,6 +58,11 @@ msgstr "{0} / {1} naudojamos užklausos"
 #: src/routes/dashboard/job-search/-components/job-utils.ts
 msgid "{0} months ago"
 msgstr "{0} prieš kelis mėnesius"
+
+#. placeholder {0}: bulkSelected.size
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{0} selected"
+msgstr ""
 
 #. placeholder {0}: Math.floor(diffDays / 7)
 #: src/routes/dashboard/job-search/-components/job-utils.ts
@@ -72,12 +78,12 @@ msgstr "{column, plural, one {# stulpelis} few {# stulpeliai} many {# stulpelių
 msgid "{diffDays} days ago"
 msgstr "{diffDays} prieš keletą dienų"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "{PROJECTS_COUNT, plural, one {# project selected} other {# projects selected}}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{listingLinkCount, plural, one {# listing link} other {# listing links}}"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "{SEARCH_LINKS_COUNT, plural, one {# search link} other {# search links}}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{projectsCount, plural, one {# project linked} other {# projects linked}}"
 msgstr ""
 
 #: src/routes/dashboard/settings/job-search.tsx
@@ -96,14 +102,6 @@ msgstr "<0>Dažniausiai</0><1>Užduodami</1><2>Klausimai</2>"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "<0>Thank you for using Reactive Resume! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If Reactive Resume has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
 msgstr "<0>Ačiū, kad naudojatės „Reactive Resume“! Ši programa yra meilės vaisius, daugiausia kuriamas mano laisvu laiku, su nuostabia atvirojo kodo bendruomenės pagalba iš viso pasaulio.</0><1>Jei „Reactive Resume“ jums buvo naudinga ir norėtumėte padėti išlaikyti ją nemokamą ir prieinamą visiems, apsvarstykite galimybę paaukoti. Kiekviena, net ir maža, parama yra labai vertinama!</1>"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "<0>Welcome back.</0> Jobs are like buses—miss one, and another comes. Let’s not miss this one."
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "0 selected"
-msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 msgid "1 month"
@@ -269,10 +267,6 @@ msgstr "Pridėti eilutę prieš"
 msgid "Added {0} new skills to your original resume"
 msgstr "Į pradinį gyvenimo aprašymą įtraukėte {0} naujų įgūdžių."
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Additional queues use the same layout in the product — this page only demonstrates the Ready view."
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Advanced Filters"
 msgstr "Išplėstiniai filtrai"
@@ -280,6 +274,10 @@ msgstr "Išplėstiniai filtrai"
 #: src/utils/locale.ts
 msgid "Afrikaans"
 msgstr "Afrikanso"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "After tailoring, your summary and highlights live in the duplicated resume in the builder."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -290,14 +288,13 @@ msgstr "AI"
 msgid "AI features"
 msgstr ""
 
+#: src/components/command-palette/pages/navigation.tsx
+#: src/components/command-palette/pages/navigation.tsx
 #: src/routes/_home/-sections/header.tsx
-#: src/routes/_home/ai-job-search.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "AI Job Search"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "AI Job Search — Reactive Resume"
 msgstr ""
 
 #: src/routes/_home/-sections/ai-features.tsx
@@ -312,7 +309,7 @@ msgstr "AI grąžino keletą negaliojančių nuorodų"
 msgid "Albanian"
 msgstr "Albanų"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "All Jobs"
 msgstr ""
 
@@ -397,7 +394,8 @@ msgstr "Programa"
 msgid "Application Statistics"
 msgstr "Programos statistika"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Applied"
 msgstr ""
 
@@ -405,11 +403,11 @@ msgstr ""
 msgid "Apply"
 msgstr "Taikyti"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Apply Link"
 msgstr "Taikyti nuorodą"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Apply Via"
 msgstr "Taikyti per"
 
@@ -485,10 +483,6 @@ msgstr "Apdovanojimai"
 msgid "Azerbaijani"
 msgstr "Azerbaidžaniečių"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Back to home"
-msgstr ""
-
 #: src/routes/auth/verify-2fa.tsx
 msgid "Back to Login"
 msgstr "Grįžti į prisijungimą"
@@ -513,7 +507,7 @@ msgstr "Pagrindai"
 msgid "Beautiful templates to choose from, with more on the way."
 msgstr "Gražūs šablonai, iš kurių galima rinktis, ir dar daugiau pakeliui."
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Benefits"
 msgstr "Privalumai"
 
@@ -608,6 +602,10 @@ msgstr "Ar galiu eksportuoti savo gyvenimo aprašymą į PDF?"
 msgid "Cancel"
 msgstr "Atšaukti"
 
+#: src/components/command-palette/pages/navigation.tsx
+msgid "Careers"
+msgstr ""
+
 #: src/utils/locale.ts
 msgid "Catalan"
 msgstr "Katalonų"
@@ -669,6 +667,11 @@ msgstr "Kinų (tradicinė)"
 msgid "Circle"
 msgstr "Apskritimas"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Classic job search"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Clear all"
 msgstr "Išvalyti viską"
@@ -703,6 +706,7 @@ msgstr "Įmonė"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Visiškai nemokama, visada, be jokių paslėptų mokesčių."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Konfigūruoti darbo paiešką"
@@ -771,6 +775,7 @@ msgstr "Nukopijuokite šį slaptą raktą ir naudokite jį savo programose duome
 msgid "Copy URL"
 msgstr "Kopijuoti URL"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Could not fetch jobs"
 msgstr "Nepavyko gauti darbo vietų"
@@ -925,10 +930,6 @@ msgstr "Pavojinga zona"
 msgid "Danish"
 msgstr "Danų"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "daogames GmbH"
-msgstr ""
-
 #: src/components/user/dropdown-menu.tsx
 #: src/utils/theme.ts
 msgid "Dark"
@@ -1008,7 +1009,7 @@ msgstr "Jūsų gyvenimo aprašymas ištrinamas..."
 #: src/dialogs/resume/sections/publication.tsx
 #: src/dialogs/resume/sections/reference.tsx
 #: src/dialogs/resume/sections/volunteer.tsx
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Description"
 msgstr "Aprašymas"
 
@@ -1016,7 +1017,7 @@ msgstr "Aprašymas"
 msgid "Design"
 msgstr "Dizainas"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Direct"
 msgstr "Tiesioginis"
 
@@ -1053,7 +1054,7 @@ msgstr "Atsijungti"
 msgid "Discord"
 msgstr "Discord"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Discovered"
 msgstr ""
 
@@ -1095,7 +1096,6 @@ msgstr "Atsisiųsti DOCX"
 msgid "Download JSON"
 msgstr "Atsisiųsti JSON"
 
-#: src/routes/_home/ai-job-search.tsx
 #: src/routes/builder/$resumeId/-components/dock.tsx
 msgid "Download PDF"
 msgstr "Atsisiųsti PDF"
@@ -1145,6 +1145,7 @@ msgstr "pvz., 150000"
 msgid "e.g. 50000"
 msgstr "pvz., 50000"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "e.g. frontend developer jobs in Berlin"
 msgstr "pvz., frontend kūrėjo darbo vietos Berlyne"
@@ -1246,14 +1247,6 @@ msgstr "Viskas, ką čia įvedate, saugoma vietoje jūsų naršyklėje. Jūsų d
 msgid "Everything you need to create, customize, and share professional resumes. Built with privacy in mind, powered by open source, and completely free forever."
 msgstr "Viskas, ko reikia sukurti, pritaikyti ir bendrinti profesionalius gyvenimo aprašymus. Sukurta atsižvelgiant į privatumą, paremta atviruoju kodu ir visiškai nemokama visam laikui."
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Example Corp"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Example saved searches and listing URLs will appear here in the app."
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/use-job-search.ts
 msgid "Exclude {value}"
 msgstr "Išskyrus {value}"
@@ -1276,6 +1269,10 @@ msgstr "Išeiti iš viso ekrano"
 msgid "Experience"
 msgstr "Patirtis"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Experience appears preferred rather than mandatory."
+msgstr ""
+
 #: src/dialogs/api-key/create.tsx
 msgid "Expires in"
 msgstr "Galioja iki"
@@ -1292,10 +1289,6 @@ msgstr "Peržiūrėkite mūsų įvairius šablonus, kiekvienas jų sukurtas skir
 #: src/routes/dashboard/settings/api-keys.tsx
 msgid "Explore the API documentation to learn how to integrate Reactive Resume with your applications. Find detailed endpoints, request examples, and authentication methods."
 msgstr "Peržiūrėkite API dokumentaciją, kad sužinotumėte, kaip integruoti „Reactive Resume“ į savo programas. Rasite išsamius galinių taškų aprašymus, užklausų pavyzdžius ir tapatumo nustatymo metodus."
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Explore the workflow: scan roles, read an AI fit assessment, refine your summary, and move a job to applied when you are ready — built for both light and dark themes."
-msgstr ""
 
 #: src/utils/resume/section.tsx
 msgid "Export"
@@ -1326,17 +1319,9 @@ msgstr "Funkcijos"
 msgid "Filter by"
 msgstr "Filtruoti pagal"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Filters"
-msgstr ""
-
 #: src/utils/locale.ts
 msgid "Finnish"
 msgstr "Suomių"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Fit assessment"
-msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Flexibility"
@@ -1363,6 +1348,10 @@ msgstr "Šrifto storis"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "Font Weights"
 msgstr "Šrifto variantai"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "For a resume-aware narrative, run Ghostwriter (tailor) with a CV you manage in Reactive Resume."
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "For a secure and distraction-free experience."
@@ -1401,6 +1390,10 @@ msgstr "Laisva forma"
 msgid "French"
 msgstr "Prancūzų"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Full listing"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/layout/pages.tsx
 msgid "Full Width"
 msgstr "Visas plotis"
@@ -1421,10 +1414,6 @@ msgstr "Sugeneruoti atsitiktinį pavadinimą"
 msgid "German"
 msgstr "Vokiečių"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Germany | Remote"
-msgstr ""
-
 #: src/routes/_home/-sections/hero.tsx
 msgid "Get Started"
 msgstr "Pradėkite"
@@ -1433,7 +1422,7 @@ msgstr "Pradėkite"
 msgid "Get your API key from RapidAPI by subscribing to the JSearch API."
 msgstr "Gaukite API raktą iš \"RapidAPI\" užsiprenumeravę JSearch API."
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Ghostwriter"
 msgstr ""
 
@@ -1446,6 +1435,7 @@ msgstr "Grįžti"
 msgid "Go to dashboard"
 msgstr "Eikite į prietaisų skydelį"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Go to Settings"
 msgstr "Eikite į Nustatymai"
@@ -1453,6 +1443,10 @@ msgstr "Eikite į Nustatymai"
 #: src/components/command-palette/pages/navigation.tsx
 msgid "Go to..."
 msgstr "Eiti į..."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Google Jobs listing"
+msgstr ""
 
 #: src/dialogs/resume/sections/education.tsx
 msgid "Grade"
@@ -1568,10 +1562,6 @@ msgstr "Kaip apsaugoti mano duomenis?"
 msgid "Hungarian"
 msgstr "Vengrų"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Hybrid · Berlin"
-msgstr ""
-
 #: src/components/level/combobox.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Icon"
@@ -1620,10 +1610,6 @@ msgstr "Įterpti lentelę"
 msgid "Interests"
 msgstr "Pomėgiai"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Interface preview"
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Intern"
 msgstr "Stažuotojas"
@@ -1652,10 +1638,6 @@ msgstr "Kursyvas"
 msgid "Japanese"
 msgstr "Japonų"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Job listings use your configured provider. AI features use your own model credentials when enabled in settings."
-msgstr ""
-
 #: src/routes/dashboard/-components/sidebar.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Job Search"
@@ -1668,6 +1650,15 @@ msgstr "Darbo paieškos API"
 
 #: src/routes/_home/-sections/ai-features.tsx
 msgid "Job-specific tailoring"
+msgstr ""
+
+#: src/components/command-palette/pages/navigation.tsx
+msgid "Jobs"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Jobs are like buses—miss one, and another comes. Let's line up the next right role here."
 msgstr ""
 
 #: src/routes/dashboard/settings/job-search.tsx
@@ -1799,8 +1790,8 @@ msgstr "Šviesi tema"
 msgid "Line Height"
 msgstr "Tarpueilio aukštis"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Link resumes or projects to track how you pitch each role."
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Linking projects to applications is not available yet—use resumes to track tailored versions."
 msgstr ""
 
 #: src/routes/dashboard/settings/authentication/-components/hooks.tsx
@@ -1810,6 +1801,11 @@ msgstr "Jungiamas jūsų {providerName} profilis..."
 #: src/routes/dashboard/resumes/index.tsx
 msgid "List"
 msgstr "Sąrašas"
+
+#. placeholder {0}: exp.required_experience_in_months
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Listed experience window: about {0} months."
+msgstr ""
 
 #: src/utils/locale.ts
 msgid "Lithuanian"
@@ -1876,12 +1872,12 @@ msgstr "Paraštė (horizontali)"
 msgid "Margin (Vertical)"
 msgstr "Paraštė (vertikali)"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Mark applied"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Match score {DEMO_SCORE}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Mark not applied"
 msgstr ""
 
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
@@ -1896,17 +1892,13 @@ msgstr "Minimalus atlyginimas"
 msgid "Model"
 msgstr "Modelis"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "More actions"
 msgstr ""
 
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "More than 3 years"
 msgstr "Daugiau nei 3 metai"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Motivated aspiring web developer eager to contribute to daogames GmbH's products through hands-on internship experience, collaborative development, and continuous learning in a remote-first team."
-msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "Move to"
@@ -1961,6 +1953,7 @@ msgstr "Naujas skyrius"
 msgid "New Skills Detected"
 msgstr "Aptikti nauji įgūdžiai"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Next"
 msgstr "Kitas"
@@ -1977,9 +1970,22 @@ msgstr "Nereikalaujamas joks išsilavinimas"
 msgid "No experience"
 msgstr "Nėra patirties"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No external links were returned for this job."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "No jobs found. Try a different search query."
 msgstr "Darbo vietų nerasta. Išbandykite kitą paieškos užklausą."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No jobs in this view for your current results. Try another tab or run a new search."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No listing quality score from provider"
+msgstr ""
 
 #: src/components/ui/combobox.tsx
 msgid "No results found."
@@ -1988,6 +1994,14 @@ msgstr "Rezultatų nerasta."
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "No resumes found. Create a resume first."
 msgstr "CV nerasta. Pirmiausia sukurkite gyvenimo aprašymą."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No strict experience minimum is advertised."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No structured experience hints were provided for this listing."
+msgstr ""
 
 #: src/utils/locale.ts
 msgid "Norwegian"
@@ -2014,16 +2028,17 @@ msgstr "Nuolatinė priežiūra"
 msgid "Open"
 msgstr "Atidaryti"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Open classic layout"
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Open Email Client"
 msgstr "Atidaryti el. pašto programą"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Open job listing"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Open Job Search"
 msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
@@ -2073,6 +2088,7 @@ msgstr "Puslapis"
 msgid "Page {0}"
 msgstr "Puslapis {0}"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Page {currentPage}"
 msgstr "Puslapis {currentPage}"
@@ -2194,9 +2210,14 @@ msgstr "Nustatymai"
 msgid "Press <0>{RETURN_KEY}</0> or <1>{COMMA_KEY}</1> to add or save the current keyword."
 msgstr "Paspauskite <0>{RETURN_KEY}</0> arba <1>{COMMA_KEY}</1>, kad pridėtumėte arba išsaugotumėte dabartinį raktinį žodį."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Previous"
 msgstr "Ankstesnis"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Primary apply URL"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Primary Color"
@@ -2248,7 +2269,17 @@ msgstr "Publikacijos"
 msgid "Publisher"
 msgstr "Leidėjas"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Publisher apply link"
+msgstr ""
+
+#. placeholder {0}: job.job_publisher || t`Unknown`
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Publisher: {0}"
+msgstr ""
+
 #. placeholder {0}: quota.remaining
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Quota: {0} remaining"
 msgstr "Kvota: {0} liko"
@@ -2281,8 +2312,8 @@ msgstr "„Reactive Resume“ šiandien startuoja „Product Hunt“ – užsuki
 msgid "Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
 msgstr "„Reactive Resume“ yra atvirojo kodo, orientuota į privatumą ir visiškai nemokama. Skirtingai nei kiti gyvenimo aprašymų kūrėjai, ji nerodo reklamų, nerenka jūsų duomenų ir neapriboja funkcijų už mokamos sienos."
 
-#: src/routes/_home/ai-job-search.tsx
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Ready"
 msgstr ""
 
@@ -2316,7 +2347,8 @@ msgstr "Perkrauti"
 msgid "Remember your password? <0/>"
 msgstr "Prisimenate slaptažodį? <0/>"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/-components/job-card.tsx
 #: src/routes/dashboard/job-search/-components/job-detail.tsx
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
@@ -2330,6 +2362,11 @@ msgstr "Tik nuotolinis valdymas"
 #: src/dialogs/resume/sections/experience.tsx
 msgid "Remove"
 msgstr "Pašalinti"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Remove from discovered"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Remove Password"
@@ -2355,7 +2392,7 @@ msgstr "Pranešti apie klaidą"
 msgid "Report an issue"
 msgstr "Pranešti apie problemą"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Required Skills"
 msgstr "Reikalingi įgūdžiai"
 
@@ -2405,6 +2442,11 @@ msgstr "Sėkmingai pritaikytas gyvenimo aprašymas"
 msgid "Resumes"
 msgstr "Gyvenimo aprašymai"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Resumes & export"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Retry"
 msgstr "Pakartoti"
@@ -2412,6 +2454,10 @@ msgstr "Pakartoti"
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
 msgstr "Lygiuoti dešinėje"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Role fit factors"
+msgstr ""
 
 #: src/dialogs/resume/sections/experience.tsx
 msgid "Role Progression"
@@ -2428,10 +2474,6 @@ msgstr "Sukimas"
 #: src/utils/locale.ts
 msgid "Russian"
 msgstr "Rusų"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sample AI job search layout. Interactive elements are for demonstration."
-msgstr ""
 
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
@@ -2458,6 +2500,11 @@ msgstr "Išsaugoti {0} įgūdžius"
 msgid "Save Changes"
 msgstr "Išsaugoti pakeitimus"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Save to discovered"
+msgstr ""
+
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Scan the QR code below with your preferred authenticator app. You can also copy the secret below and paste it into your app."
 msgstr "Nuskenuokite žemiau esantį QR kodą pasirinkta autentifikavimo programa. Taip pat galite nukopijuoti žemiau esantį slaptą kodą ir įklijuoti jį į programą."
@@ -2466,7 +2513,9 @@ msgstr "Nuskenuokite žemiau esantį QR kodą pasirinkta autentifikavimo program
 msgid "School"
 msgstr "Mokykla"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Search"
@@ -2485,10 +2534,6 @@ msgstr "Ieškoti ikonos"
 msgid "Search for..."
 msgstr "Ieškoti..."
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Search listings, review fit, generate tailored summaries, and track applications — integrated into Reactive Resume."
-msgstr ""
-
 #: src/components/ui/combobox.tsx
 msgid "Search..."
 msgstr "Ieškoti..."
@@ -2501,6 +2546,10 @@ msgstr "Slaptas kodas nukopijuotas į iškarpinę."
 msgid "Section Type"
 msgstr "Skyriaus tipas"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Select a job from the list."
+msgstr ""
+
 #. placeholder {0}: job.job_title
 #. placeholder {1}: job.employer_name
 #. placeholder {2}: aiEnabled ? " and the AI will optimize it for this position." : "."
@@ -2508,7 +2557,7 @@ msgstr "Skyriaus tipas"
 msgid "Select a resume to tailor for \"{0}\" at {1}. A copy will be created{2}"
 msgstr "Pasirinkite gyvenimo aprašymą, kurį norite pritaikyti \"{0}\" adresu {1}. Bus sukurta kopija{2}"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Select all filtered"
 msgstr ""
 
@@ -2531,10 +2580,6 @@ msgstr "Siųsti slaptažodžio atkūrimo el. laišką"
 #: src/routes/auth/forgot-password.tsx
 msgid "Sending password reset email..."
 msgstr "Siunčiamas slaptažodžio atkūrimo el. laiškas..."
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Senior Frontend Engineer"
-msgstr ""
 
 #: src/components/input/rich-input.tsx
 msgid "Separator"
@@ -2606,10 +2651,6 @@ msgstr "Šoninės juostos plotis"
 #: src/routes/auth/login.tsx
 msgid "Sign in"
 msgstr "Prisijungti"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sign in to try it"
-msgstr ""
 
 #: src/routes/auth/login.tsx
 msgid "Sign in to your account"
@@ -2714,10 +2755,6 @@ msgstr "Tarpai (vertikalūs)"
 msgid "Spanish"
 msgstr "Ispanų"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sponsor not found"
-msgstr ""
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Sponsors"
 msgstr "Rėmėjai"
@@ -2748,10 +2785,6 @@ msgstr "Pradėkite kurti savo gyvenimo aprašymą suteikdami jam pavadinimą."
 #: src/routes/dashboard/resumes/-components/list-view.tsx
 msgid "Start building your resume from scratch"
 msgstr "Pradėkite kurti savo gyvenimo aprašymą nuo nulio"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Startup jobs"
-msgstr ""
 
 #: src/utils/resume/section.tsx
 msgid "Statistics"
@@ -2806,12 +2839,16 @@ msgstr "Žymos"
 msgid "Tags can be used to categorize your resume by keywords."
 msgstr "Žymomis galite grupuoti savo gyvenimo aprašymą pagal raktinius žodžius."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Tailor a resume"
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/job-detail.tsx
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Tailor Resume"
 msgstr "Tailor CV"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Tailored summary"
 msgstr ""
 
@@ -2887,10 +2924,6 @@ msgstr "Neteisingas slaptažodis"
 #: src/routes/auth/resume-password.tsx
 msgid "The resume you are trying to access is password protected"
 msgstr "Gyvenimo aprašymas, kurį bandote atidaryti, yra apsaugotas slaptažodžiu"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "The role is entry-level and remote-friendly, which supports flexibility. Until your profile lists relevant web development skills and concrete experience, fit stays tentative—add internships, projects, or coursework so the assessment can strengthen."
-msgstr ""
 
 #: src/components/input/rich-input.tsx
 msgid "The URL you entered is not valid."
@@ -2991,6 +3024,7 @@ msgstr "Pavadinimas"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "Norėdami ištrinti paskyrą, įveskite patvirtinimo tekstą ir spustelėkite žemiau esantį mygtuką."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Norėdami ieškoti darbo skelbimų, turite sukonfigūruoti RapidAPI raktą nustatymuose."
@@ -3004,7 +3038,7 @@ msgstr "Šiandien"
 msgid "Track your resume's views and downloads"
 msgstr "Stebėkite savo gyvenimo aprašymo peržiūras ir atsisiuntimus"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Tracker off"
 msgstr ""
 
@@ -3016,10 +3050,6 @@ msgstr "Vertimai"
 #: src/utils/locale.ts
 msgid "Turkish"
 msgstr "Turkų"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Turn job listings into tailored resumes"
-msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
@@ -3108,6 +3138,10 @@ msgstr "Pabraukti"
 msgctxt "'Ctrl' may be replaced with the locale-specific equivalent (e.g. 'Strg' for QWERTZ layouts)."
 msgid "Undo (Ctrl+Z)"
 msgstr "Anuliuoti (Ctrl+Z)"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Unknown"
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Unlimited Resumes"
@@ -3281,8 +3315,8 @@ msgstr "Slaptažodžio atkūrimui būtina patvirtinti el. paštą."
 msgid "Vietnamese"
 msgstr "Vietnamiečių"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "View"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "View listing"
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
@@ -3293,10 +3327,6 @@ msgstr "Peržiūros"
 #: src/utils/resume/section.tsx
 msgid "Volunteer"
 msgstr "Savanorystė"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Web Developer Intern"
-msgstr ""
 
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -3310,6 +3340,14 @@ msgstr ""
 #: src/routes/builder/$resumeId/-sidebar/left/sections/basics.tsx
 msgid "Website"
 msgstr "Tinklalapis"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Welcome back, {displayName}."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Welcome back."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"

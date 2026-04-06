@@ -97,6 +97,11 @@ export function useJobSearch() {
     setSheetOpen(true);
   };
 
+  const selectJobInline = useCallback((job: JobResult | null) => {
+    setSelectedJob(job);
+    setSheetOpen(false);
+  }, []);
+
   const removeFilter = (key: keyof FilterState, value?: string) => {
     if (key === "includeKeywords" || key === "excludeKeywords" || key === "excludeCompanies") {
       const currentValues = filters[key];
@@ -149,9 +154,11 @@ export function useJobSearch() {
     quota,
     removeFilter,
     scrollRef,
+    selectJobInline,
     selectedJob,
     setFilters,
     setQuery,
+    setSelectedJob,
     setSheetOpen,
     sheetOpen,
   };

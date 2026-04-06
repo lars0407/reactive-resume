@@ -58,7 +58,7 @@ const appSidebarItems = [
   {
     icon: <SparkleIcon />,
     label: msg`AI Job Search`,
-    href: "/ai-job-search",
+    href: "/dashboard/ai-job-search",
   },
 ] as const satisfies SidebarItem[];
 

@@ -49,6 +49,7 @@ msgstr "{0, plural, one {# vai trò} other {# vai trò}}"
 
 #. placeholder {0}: quota.used
 #. placeholder {1}: quota.limit
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "{0} / {1} requests used"
 msgstr "{0} / {1} số lượt truy cập"
@@ -57,6 +58,11 @@ msgstr "{0} / {1} số lượt truy cập"
 #: src/routes/dashboard/job-search/-components/job-utils.ts
 msgid "{0} months ago"
 msgstr "{0} vài tháng trước"
+
+#. placeholder {0}: bulkSelected.size
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{0} selected"
+msgstr ""
 
 #. placeholder {0}: Math.floor(diffDays / 7)
 #: src/routes/dashboard/job-search/-components/job-utils.ts
@@ -72,12 +78,12 @@ msgstr "{column, plural, other {# Cột}}"
 msgid "{diffDays} days ago"
 msgstr "{diffDays} vài ngày trước"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "{PROJECTS_COUNT, plural, one {# project selected} other {# projects selected}}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{listingLinkCount, plural, one {# listing link} other {# listing links}}"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "{SEARCH_LINKS_COUNT, plural, one {# search link} other {# search links}}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "{projectsCount, plural, one {# project linked} other {# projects linked}}"
 msgstr ""
 
 #: src/routes/dashboard/settings/job-search.tsx
@@ -96,14 +102,6 @@ msgstr "<0>Thường xuyên</0><1>Được hỏi</1><2>Câu hỏi</2>"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "<0>Thank you for using Reactive Resume! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If Reactive Resume has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
 msgstr "<0>Cảm ơn bạn đã sử dụng Reactive Resume! Ứng dụng này là kết quả của niềm đam mê, được tạo ra chủ yếu vào thời gian rảnh với sự hỗ trợ tuyệt vời từ các cộng tác viên mã nguồn mở trên toàn thế giới.</0><1>Nếu Reactive Resume đã hữu ích với bạn, và bạn muốn giúp ứng dụng luôn miễn phí và mở cho mọi người, hãy cân nhắc quyên góp. Mỗi sự đóng góp đều được trân trọng!</1>"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "<0>Welcome back.</0> Jobs are like buses—miss one, and another comes. Let’s not miss this one."
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "0 selected"
-msgstr ""
 
 #: src/dialogs/api-key/create.tsx
 msgid "1 month"
@@ -269,10 +267,6 @@ msgstr "Thêm dòng trước"
 msgid "Added {0} new skills to your original resume"
 msgstr "Đã thêm các kỹ năng mới từ {0} vào bản lý lịch ban đầu của bạn"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Additional queues use the same layout in the product — this page only demonstrates the Ready view."
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Advanced Filters"
 msgstr "Bộ lọc nâng cao"
@@ -280,6 +274,10 @@ msgstr "Bộ lọc nâng cao"
 #: src/utils/locale.ts
 msgid "Afrikaans"
 msgstr "Tiếng Afrikaans"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "After tailoring, your summary and highlights live in the duplicated resume in the builder."
+msgstr ""
 
 #: src/dialogs/resume/import.tsx
 #: src/dialogs/resume/import.tsx
@@ -290,14 +288,13 @@ msgstr "AI"
 msgid "AI features"
 msgstr ""
 
+#: src/components/command-palette/pages/navigation.tsx
+#: src/components/command-palette/pages/navigation.tsx
 #: src/routes/_home/-sections/header.tsx
-#: src/routes/_home/ai-job-search.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "AI Job Search"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "AI Job Search — Reactive Resume"
 msgstr ""
 
 #: src/routes/_home/-sections/ai-features.tsx
@@ -312,7 +309,7 @@ msgstr "AI đã trả về một số tham chiếu không hợp lệ"
 msgid "Albanian"
 msgstr "Tiếng Albania"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "All Jobs"
 msgstr ""
 
@@ -397,7 +394,8 @@ msgstr "Ứng dụng"
 msgid "Application Statistics"
 msgstr "Thống kê ứng dụng"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Applied"
 msgstr ""
 
@@ -405,11 +403,11 @@ msgstr ""
 msgid "Apply"
 msgstr "Đăng ký"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Apply Link"
 msgstr "Đăng ký tại đây"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Apply Via"
 msgstr "Đăng ký qua"
 
@@ -485,10 +483,6 @@ msgstr "Giải thưởng"
 msgid "Azerbaijani"
 msgstr "Tiếng Azerbaijan"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Back to home"
-msgstr ""
-
 #: src/routes/auth/verify-2fa.tsx
 msgid "Back to Login"
 msgstr "Quay lại đăng nhập"
@@ -513,7 +507,7 @@ msgstr "Cơ bản"
 msgid "Beautiful templates to choose from, with more on the way."
 msgstr "Các mẫu đẹp để lựa chọn, sẽ còn cập nhật thêm trong tương lai."
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Benefits"
 msgstr "Lợi ích"
 
@@ -608,6 +602,10 @@ msgstr "Tôi có thể xuất sơ yếu lý lịch của mình ra PDF không?"
 msgid "Cancel"
 msgstr "Hủy"
 
+#: src/components/command-palette/pages/navigation.tsx
+msgid "Careers"
+msgstr ""
+
 #: src/utils/locale.ts
 msgid "Catalan"
 msgstr "Tiếng Catalan"
@@ -669,6 +667,11 @@ msgstr "Tiếng Trung (Phồn thể)"
 msgid "Circle"
 msgstr "Vòng tròn"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Classic job search"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Clear all"
 msgstr "Xóa tất cả"
@@ -703,6 +706,7 @@ msgstr "Công ty"
 msgid "Completely free, forever, no hidden costs."
 msgstr "Hoàn toàn miễn phí, mãi mãi, không có chi phí ẩn."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Configure Job Search"
 msgstr "Cài đặt tìm kiếm việc làm"
@@ -771,6 +775,7 @@ msgstr "Sao chép khóa bí mật này và sử dụng trong ứng dụng của 
 msgid "Copy URL"
 msgstr "Sao chép URL"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Could not fetch jobs"
 msgstr "Không thể lấy được các công việc"
@@ -925,10 +930,6 @@ msgstr "Vùng nguy hiểm"
 msgid "Danish"
 msgstr "Tiếng Đan Mạch"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "daogames GmbH"
-msgstr ""
-
 #: src/components/user/dropdown-menu.tsx
 #: src/utils/theme.ts
 msgid "Dark"
@@ -1008,7 +1009,7 @@ msgstr "Đang xóa bản lý lịch của bạn..."
 #: src/dialogs/resume/sections/publication.tsx
 #: src/dialogs/resume/sections/reference.tsx
 #: src/dialogs/resume/sections/volunteer.tsx
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Description"
 msgstr "Mô tả"
 
@@ -1016,7 +1017,7 @@ msgstr "Mô tả"
 msgid "Design"
 msgstr "Thiết kế"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Direct"
 msgstr "Trực tiếp"
 
@@ -1053,7 +1054,7 @@ msgstr "Ngắt kết nối"
 msgid "Discord"
 msgstr "Discord"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Discovered"
 msgstr ""
 
@@ -1095,7 +1096,6 @@ msgstr "Tải xuống DOCX"
 msgid "Download JSON"
 msgstr "Tải xuống JSON"
 
-#: src/routes/_home/ai-job-search.tsx
 #: src/routes/builder/$resumeId/-components/dock.tsx
 msgid "Download PDF"
 msgstr "Tải xuống PDF"
@@ -1145,6 +1145,7 @@ msgstr "ví dụ: 150.000"
 msgid "e.g. 50000"
 msgstr "ví dụ: 50.000"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "e.g. frontend developer jobs in Berlin"
 msgstr "Ví dụ: các vị trí tuyển dụng lập trình viên frontend tại Berlin"
@@ -1246,14 +1247,6 @@ msgstr "Tất cả thông tin điền ở đây đều được lưu cục bộ 
 msgid "Everything you need to create, customize, and share professional resumes. Built with privacy in mind, powered by open source, and completely free forever."
 msgstr "Mọi thứ bạn cần để tạo, tùy chỉnh và chia sẻ bản lý lịch chuyên nghiệp. Được xây dựng với tính riêng tư, mã nguồn mở và hoàn toàn miễn phí mãi mãi."
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Example Corp"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Example saved searches and listing URLs will appear here in the app."
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/use-job-search.ts
 msgid "Exclude {value}"
 msgstr "Loại trừ {value}"
@@ -1276,6 +1269,10 @@ msgstr "Thoát toàn màn hình"
 msgid "Experience"
 msgstr "Kinh nghiệm"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Experience appears preferred rather than mandatory."
+msgstr ""
+
 #: src/dialogs/api-key/create.tsx
 msgid "Expires in"
 msgstr "Hết hạn sau"
@@ -1292,10 +1289,6 @@ msgstr "Khám phá nhiều mẫu đa dạng, được thiết kế phù hợp v�
 #: src/routes/dashboard/settings/api-keys.tsx
 msgid "Explore the API documentation to learn how to integrate Reactive Resume with your applications. Find detailed endpoints, request examples, and authentication methods."
 msgstr "Khám phá tài liệu API để tìm hiểu cách tích hợp Reactive Resume với các ứng dụng của bạn. Tìm các endpoint chi tiết, ví dụ về yêu cầu và phương thức xác thực."
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Explore the workflow: scan roles, read an AI fit assessment, refine your summary, and move a job to applied when you are ready — built for both light and dark themes."
-msgstr ""
 
 #: src/utils/resume/section.tsx
 msgid "Export"
@@ -1326,17 +1319,9 @@ msgstr "Tính năng"
 msgid "Filter by"
 msgstr "Lọc theo"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Filters"
-msgstr ""
-
 #: src/utils/locale.ts
 msgid "Finnish"
 msgstr "Tiếng Phần Lan"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Fit assessment"
-msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Flexibility"
@@ -1363,6 +1348,10 @@ msgstr "Độ đậm Font"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "Font Weights"
 msgstr "Các độ đậm Font"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "For a resume-aware narrative, run Ghostwriter (tailor) with a CV you manage in Reactive Resume."
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "For a secure and distraction-free experience."
@@ -1401,6 +1390,10 @@ msgstr "Tự do"
 msgid "French"
 msgstr "Tiếng Pháp"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Full listing"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/layout/pages.tsx
 msgid "Full Width"
 msgstr "Chiều rộng đầy đủ"
@@ -1421,10 +1414,6 @@ msgstr "Tạo tên ngẫu nhiên"
 msgid "German"
 msgstr "Tiếng Đức"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Germany | Remote"
-msgstr ""
-
 #: src/routes/_home/-sections/hero.tsx
 msgid "Get Started"
 msgstr "Bắt đầu"
@@ -1433,7 +1422,7 @@ msgstr "Bắt đầu"
 msgid "Get your API key from RapidAPI by subscribing to the JSearch API."
 msgstr "Hãy lấy khóa API của bạn từ RapidAPI bằng cách đăng ký sử dụng API JSearch."
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Ghostwriter"
 msgstr ""
 
@@ -1446,6 +1435,7 @@ msgstr "Quay lại"
 msgid "Go to dashboard"
 msgstr "Đi đến bảng điều khiển"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Go to Settings"
 msgstr "Vào Cài đặt"
@@ -1453,6 +1443,10 @@ msgstr "Vào Cài đặt"
 #: src/components/command-palette/pages/navigation.tsx
 msgid "Go to..."
 msgstr "Đi đến..."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Google Jobs listing"
+msgstr ""
 
 #: src/dialogs/resume/sections/education.tsx
 msgid "Grade"
@@ -1568,10 +1562,6 @@ msgstr "Dữ liệu của tôi được bảo vệ như thế nào?"
 msgid "Hungarian"
 msgstr "Tiếng Hungary"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Hybrid · Berlin"
-msgstr ""
-
 #: src/components/level/combobox.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Icon"
@@ -1620,10 +1610,6 @@ msgstr "Chèn bảng"
 msgid "Interests"
 msgstr "Sở thích"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Interface preview"
-msgstr ""
-
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "Intern"
 msgstr "Thực tập sinh"
@@ -1652,10 +1638,6 @@ msgstr "In nghiêng"
 msgid "Japanese"
 msgstr "Tiếng Nhật"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Job listings use your configured provider. AI features use your own model credentials when enabled in settings."
-msgstr ""
-
 #: src/routes/dashboard/-components/sidebar.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Job Search"
@@ -1668,6 +1650,15 @@ msgstr "API Tìm kiếm việc làm"
 
 #: src/routes/_home/-sections/ai-features.tsx
 msgid "Job-specific tailoring"
+msgstr ""
+
+#: src/components/command-palette/pages/navigation.tsx
+msgid "Jobs"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Jobs are like buses—miss one, and another comes. Let's line up the next right role here."
 msgstr ""
 
 #: src/routes/dashboard/settings/job-search.tsx
@@ -1799,8 +1790,8 @@ msgstr "Chủ đề sáng"
 msgid "Line Height"
 msgstr "Chiều cao giữa các dòng"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Link resumes or projects to track how you pitch each role."
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Linking projects to applications is not available yet—use resumes to track tailored versions."
 msgstr ""
 
 #: src/routes/dashboard/settings/authentication/-components/hooks.tsx
@@ -1810,6 +1801,11 @@ msgstr "Đang liên kết tài khoản {providerName} của bạn..."
 #: src/routes/dashboard/resumes/index.tsx
 msgid "List"
 msgstr "Danh sách"
+
+#. placeholder {0}: exp.required_experience_in_months
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Listed experience window: about {0} months."
+msgstr ""
 
 #: src/utils/locale.ts
 msgid "Lithuanian"
@@ -1876,12 +1872,12 @@ msgstr "Lề (Ngang)"
 msgid "Margin (Vertical)"
 msgstr "Lề (Dọc)"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Mark applied"
 msgstr ""
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Match score {DEMO_SCORE}"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Mark not applied"
 msgstr ""
 
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
@@ -1896,17 +1892,13 @@ msgstr "Mức lương tối thiểu"
 msgid "Model"
 msgstr "Mô hình"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "More actions"
 msgstr ""
 
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
 msgid "More than 3 years"
 msgstr "Hơn 3 năm"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Motivated aspiring web developer eager to contribute to daogames GmbH's products through hands-on internship experience, collaborative development, and continuous learning in a remote-first team."
-msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "Move to"
@@ -1961,6 +1953,7 @@ msgstr "Phần mới"
 msgid "New Skills Detected"
 msgstr "Phát hiện kỹ năng mới"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Next"
 msgstr "Tiếp theo"
@@ -1977,9 +1970,22 @@ msgstr "Không yêu cầu bằng cấp"
 msgid "No experience"
 msgstr "Chưa có kinh nghiệm"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No external links were returned for this job."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "No jobs found. Try a different search query."
 msgstr "Không tìm thấy kết quả nào. Hãy thử nhập từ khóa tìm kiếm khác."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No jobs in this view for your current results. Try another tab or run a new search."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No listing quality score from provider"
+msgstr ""
 
 #: src/components/ui/combobox.tsx
 msgid "No results found."
@@ -1988,6 +1994,14 @@ msgstr "Không tìm thấy kết quả."
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "No resumes found. Create a resume first."
 msgstr "Không tìm thấy hồ sơ nào. Vui lòng tạo hồ sơ trước."
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No strict experience minimum is advertised."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "No structured experience hints were provided for this listing."
+msgstr ""
 
 #: src/utils/locale.ts
 msgid "Norwegian"
@@ -2014,16 +2028,17 @@ msgstr "Bảo trì liên tục"
 msgid "Open"
 msgstr "Mở"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Open classic layout"
+msgstr ""
+
 #: src/routes/auth/forgot-password.tsx
 msgid "Open Email Client"
 msgstr "Mở ứng dụng Email"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Open job listing"
-msgstr ""
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Open Job Search"
 msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
@@ -2073,6 +2088,7 @@ msgstr "Trang"
 msgid "Page {0}"
 msgstr "Trang {0}"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Page {currentPage}"
 msgstr "Trang {currentPage}"
@@ -2194,9 +2210,14 @@ msgstr "Tùy chọn"
 msgid "Press <0>{RETURN_KEY}</0> or <1>{COMMA_KEY}</1> to add or save the current keyword."
 msgstr "Nhấn <0>{RETURN_KEY}</0> hoặc <1>{COMMA_KEY}</1> để thêm hoặc lưu từ khóa hiện tại."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Previous"
 msgstr "Trước đó"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Primary apply URL"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Primary Color"
@@ -2248,7 +2269,17 @@ msgstr "Ấn phẩm"
 msgid "Publisher"
 msgstr "Nhà xuất bản"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Publisher apply link"
+msgstr ""
+
+#. placeholder {0}: job.job_publisher || t`Unknown`
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Publisher: {0}"
+msgstr ""
+
 #. placeholder {0}: quota.remaining
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Quota: {0} remaining"
 msgstr "Số lượng còn lại: {0}"
@@ -2281,8 +2312,8 @@ msgstr "Resume Phản Ứng sẽ ra mắt trên Product Hunt hôm nay, hãy ghé
 msgid "Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
 msgstr "Resume Phản Ứng là mã nguồn mở, tập trung vào quyền riêng tư và hoàn toàn miễn phí. Khác với các trình tạo hồ sơ khác, nó không hiển thị quảng cáo, không theo dõi dữ liệu của bạn, và không giới hạn tính năng đằng sau tường phí."
 
-#: src/routes/_home/ai-job-search.tsx
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Ready"
 msgstr ""
 
@@ -2316,7 +2347,8 @@ msgstr "Làm mới"
 msgid "Remember your password? <0/>"
 msgstr "Nhớ mật khẩu? <0/>"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/-components/job-card.tsx
 #: src/routes/dashboard/job-search/-components/job-detail.tsx
 #: src/routes/dashboard/job-search/-components/search-filters.tsx
@@ -2330,6 +2362,11 @@ msgstr "Chỉ làm việc từ xa"
 #: src/dialogs/resume/sections/experience.tsx
 msgid "Remove"
 msgstr "Xóa"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Remove from discovered"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Remove Password"
@@ -2355,7 +2392,7 @@ msgstr "Báo lỗi"
 msgid "Report an issue"
 msgstr "Báo cáo sự cố"
 
-#: src/routes/dashboard/job-search/-components/job-detail.tsx
+#: src/routes/dashboard/job-search/-components/job-detail-description-sections.tsx
 msgid "Required Skills"
 msgstr "Kỹ năng cần thiết"
 
@@ -2405,6 +2442,11 @@ msgstr "Sơ yếu lý lịch được soạn thảo phù hợp"
 msgid "Resumes"
 msgstr "Sơ yếu lý lịch"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Resumes & export"
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Retry"
 msgstr "Thử lại"
@@ -2412,6 +2454,10 @@ msgstr "Thử lại"
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
 msgstr "Căn phải"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Role fit factors"
+msgstr ""
 
 #: src/dialogs/resume/sections/experience.tsx
 msgid "Role Progression"
@@ -2428,10 +2474,6 @@ msgstr "Xoay"
 #: src/utils/locale.ts
 msgid "Russian"
 msgstr "Nga"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sample AI job search layout. Interactive elements are for demonstration."
-msgstr ""
 
 #. placeholder {0}: selectedSkills.size
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
@@ -2458,6 +2500,11 @@ msgstr "Lưu {0} Kỹ năng"
 msgid "Save Changes"
 msgstr "Lưu thay đổi"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Save to discovered"
+msgstr ""
+
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Scan the QR code below with your preferred authenticator app. You can also copy the secret below and paste it into your app."
 msgstr "Quét mã QR bên dưới bằng ứng dụng xác thực bạn ưa thích. Bạn cũng có thể sao chép mã bí mật bên dưới và dán vào ứng dụng của mình."
@@ -2466,7 +2513,9 @@ msgstr "Quét mã QR bên dưới bằng ứng dụng xác thực bạn ưa thí
 msgid "School"
 msgstr "Trường"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "Search"
@@ -2485,10 +2534,6 @@ msgstr "Tìm kiếm biểu tượng"
 msgid "Search for..."
 msgstr "Tìm kiếm..."
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Search listings, review fit, generate tailored summaries, and track applications — integrated into Reactive Resume."
-msgstr ""
-
 #: src/components/ui/combobox.tsx
 msgid "Search..."
 msgstr "Tìm kiếm..."
@@ -2501,6 +2546,10 @@ msgstr "Mã bí mật đã được sao chép vào clipboard."
 msgid "Section Type"
 msgstr "Loại phần"
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Select a job from the list."
+msgstr ""
+
 #. placeholder {0}: job.job_title
 #. placeholder {1}: job.employer_name
 #. placeholder {2}: aiEnabled ? " and the AI will optimize it for this position." : "."
@@ -2508,7 +2557,7 @@ msgstr "Loại phần"
 msgid "Select a resume to tailor for \"{0}\" at {1}. A copy will be created{2}"
 msgstr "Chọn một bản lý lịch để chỉnh sửa cho \"{0}\" tại {1}. Một bản sao sẽ được tạo ra tại{2}"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Select all filtered"
 msgstr ""
 
@@ -2531,10 +2580,6 @@ msgstr "Gửi email đặt lại mật khẩu"
 #: src/routes/auth/forgot-password.tsx
 msgid "Sending password reset email..."
 msgstr "Đang gửi email đặt lại mật khẩu..."
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Senior Frontend Engineer"
-msgstr ""
 
 #: src/components/input/rich-input.tsx
 msgid "Separator"
@@ -2606,10 +2651,6 @@ msgstr "Độ rộng thanh bên"
 #: src/routes/auth/login.tsx
 msgid "Sign in"
 msgstr "Đăng nhập"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sign in to try it"
-msgstr ""
 
 #: src/routes/auth/login.tsx
 msgid "Sign in to your account"
@@ -2714,10 +2755,6 @@ msgstr "Khoảng cách (Dọc)"
 msgid "Spanish"
 msgstr "Tây Ban Nha"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "Sponsor not found"
-msgstr ""
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Sponsors"
 msgstr "Nhà tài trợ"
@@ -2748,10 +2785,6 @@ msgstr "Bắt đầu xây dựng hồ sơ của bạn bằng cách đặt tên c
 #: src/routes/dashboard/resumes/-components/list-view.tsx
 msgid "Start building your resume from scratch"
 msgstr "Bắt đầu xây dựng hồ sơ từ đầu"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Startup jobs"
-msgstr ""
 
 #: src/utils/resume/section.tsx
 msgid "Statistics"
@@ -2806,12 +2839,16 @@ msgstr "Thẻ"
 msgid "Tags can be used to categorize your resume by keywords."
 msgstr "Thẻ có thể được dùng để phân loại hồ sơ của bạn theo từ khóa."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Tailor a resume"
+msgstr ""
+
 #: src/routes/dashboard/job-search/-components/job-detail.tsx
 #: src/routes/dashboard/job-search/-components/tailor-dialog.tsx
 msgid "Tailor Resume"
 msgstr "Soạn thảo sơ yếu lý lịch"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Tailored summary"
 msgstr ""
 
@@ -2887,10 +2924,6 @@ msgstr "Mật khẩu bạn đã nhập không đúng"
 #: src/routes/auth/resume-password.tsx
 msgid "The resume you are trying to access is password protected"
 msgstr "Hồ sơ bạn đang cố truy cập đã được bảo vệ bằng mật khẩu"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "The role is entry-level and remote-friendly, which supports flexibility. Until your profile lists relevant web development skills and concrete experience, fit stays tentative—add internships, projects, or coursework so the assessment can strengthen."
-msgstr ""
 
 #: src/components/input/rich-input.tsx
 msgid "The URL you entered is not valid."
@@ -2991,6 +3024,7 @@ msgstr "Tiêu đề"
 msgid "To delete your account, you need to enter the confirmation text and click the button below."
 msgstr "Để xóa tài khoản của bạn, bạn cần nhập văn bản xác nhận và nhấp vào nút bên dưới."
 
+#: src/routes/dashboard/ai-job-search/index.tsx
 #: src/routes/dashboard/job-search/index.tsx
 msgid "To search for job listings, you need to configure your RapidAPI key in settings."
 msgstr "Để tìm kiếm các tin tuyển dụng, bạn cần thiết lập khóa RapidAPI của mình trong phần cài đặt."
@@ -3004,7 +3038,7 @@ msgstr "Hôm nay"
 msgid "Track your resume's views and downloads"
 msgstr "Theo dõi lượt xem và lượt tải xuống hồ sơ của bạn"
 
-#: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/ai-job-search/index.tsx
 msgid "Tracker off"
 msgstr ""
 
@@ -3016,10 +3050,6 @@ msgstr "Bản dịch"
 #: src/utils/locale.ts
 msgid "Turkish"
 msgstr "Thổ Nhĩ Kỳ"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Turn job listings into tailored resumes"
-msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
@@ -3108,6 +3138,10 @@ msgstr "Gạch chân"
 msgctxt "'Ctrl' may be replaced with the locale-specific equivalent (e.g. 'Strg' for QWERTZ layouts)."
 msgid "Undo (Ctrl+Z)"
 msgstr "Hoàn tác (Ctrl+Z)"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Unknown"
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Unlimited Resumes"
@@ -3281,8 +3315,8 @@ msgstr "Cần xác minh email của bạn khi đặt lại mật khẩu."
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
 
-#: src/routes/_home/ai-job-search.tsx
-msgid "View"
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "View listing"
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
@@ -3293,10 +3327,6 @@ msgstr "Lượt xem"
 #: src/utils/resume/section.tsx
 msgid "Volunteer"
 msgstr "Tình nguyện viên"
-
-#: src/routes/_home/ai-job-search.tsx
-msgid "Web Developer Intern"
-msgstr ""
 
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -3310,6 +3340,14 @@ msgstr ""
 #: src/routes/builder/$resumeId/-sidebar/left/sections/basics.tsx
 msgid "Website"
 msgstr "Trang web"
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Welcome back, {displayName}."
+msgstr ""
+
+#: src/routes/dashboard/ai-job-search/index.tsx
+msgid "Welcome back."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"

@@ -7,6 +7,7 @@ import {
   OpenAiLogoIcon,
   ReadCvLogoIcon,
   ShieldCheckIcon,
+  SparkleIcon,
   UserCircleIcon,
   WarningIcon,
 } from "@phosphor-icons/react";
@@ -44,6 +45,16 @@ export function NavigationCommandGroup() {
         >
           <ReadCvLogoIcon />
           <Trans>Resumes</Trans>
+        </CommandItem>
+
+        <CommandItem
+          disabled={!session}
+          keywords={[t`AI Job Search`, t`Jobs`, t`Careers`]}
+          value="navigation.ai-job-search"
+          onSelect={() => onNavigate("/dashboard/ai-job-search")}
+        >
+          <SparkleIcon />
+          <Trans>AI Job Search</Trans>
         </CommandItem>
 
         <CommandItem

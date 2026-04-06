@@ -60,7 +60,7 @@ export function Header() {
         </Link>
 
         <Link
-          to="/ai-job-search"
+          to="/dashboard/ai-job-search"
           className="ml-4 hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
         >
           <Trans>AI Job Search</Trans>
