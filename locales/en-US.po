@@ -267,6 +267,7 @@ msgstr "AI features"
 
 #: src/routes/_home/-sections/header.tsx
 #: src/routes/_home/ai-job-search.tsx
+#: src/routes/dashboard/-components/sidebar.tsx
 msgid "AI Job Search"
 msgstr "AI Job Search"
 

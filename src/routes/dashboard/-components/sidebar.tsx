@@ -10,6 +10,7 @@ import {
   KeyIcon,
   ReadCvLogoIcon,
   ShieldCheckIcon,
+  SparkleIcon,
   UserCircleIcon,
   WarningIcon,
 } from "@phosphor-icons/react";
@@ -53,6 +54,11 @@ const appSidebarItems = [
     icon: <BriefcaseIcon />,
     label: msg`Job Search`,
     href: "/dashboard/job-search",
+  },
+  {
+    icon: <SparkleIcon />,
+    label: msg`AI Job Search`,
+    href: "/ai-job-search",
   },
 ] as const satisfies SidebarItem[];
 
